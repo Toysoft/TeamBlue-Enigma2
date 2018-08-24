@@ -824,7 +824,7 @@ void eDVBDB::saveServicelist(const char *file)
 					fprintf(g, ":%d:%d:%d:%d", sat.system, sat.modulation, sat.rolloff, sat.pilot);
 
 				if (static_cast<unsigned int>(sat.is_id) != NO_STREAM_ID_FILTER ||
-					(sat.pls_code & 0x3FFFF) != 1 ||
+					(sat.pls_code & 0x3FFFF) != 0 ||
 					(sat.pls_mode & 3) != eDVBFrontendParametersSatellite::PLS_Gold)
 				{
 					fprintf(f, ":%d:%d:%d", sat.is_id, sat.pls_code & 0x3FFFF, sat.pls_mode & 3);
@@ -2106,6 +2106,21 @@ bool eDVBDB::isCrypted(const eServiceReference &ref)
 		if (it != m_services.end())
 		{
 			return it->second->isCrypted();
+		}
+	}
+	return false;
+}
+
+bool eDVBDB::hasCAID(const eServiceReference &ref, unsigned int caid)
+{
+	if (ref.type == eServiceReference::idDVB)
+	{
+		eServiceReferenceDVB &service = (eServiceReferenceDVB&)ref;
+		std::map<eServiceReferenceDVB, ePtr<eDVBService> >::iterator it(m_services.find(service));
+		if (it != m_services.end())
+		{
+			return std::find(it->second->m_ca.begin(), it->second->m_ca.end(),
+				(uint16_t)caid) != it->second->m_ca.end();
 		}
 	}
 	return false;
