@@ -95,11 +95,6 @@ class AudioSelection(Screen, ConfigListScreen):
 				self.settings.downmix.addNotifier(self.changeAC3Downmix, initial_call = False)
 				conflist.append(getConfigListEntry(_("Multi channel downmix"), self.settings.downmix))
 				self["key_red"].setBoolean(True)
-			if SystemInfo["CanAC3plusTranscode"]:
-				choice_list = [("use_hdmi_caps", _("controlled by HDMI")), ("force_ac3", _("convert to AC3")), ("multichannel",  _("convert to multi-channel PCM")), ("hdmi_best",  _("use best, controlled by HDMI")), ("force_ddp",  _("force AC3 plus"))]
-				self.settings.transcode_ac3plus = ConfigSelection(choices = choice_list, default = "force_ac3")
-				self.settings.transcode_ac3plus.addNotifier(self.setAC3plusTranscode, initial_call = False)
-				conflist.append(getConfigListEntry(_("AC3 plus transcoding"), self.settings.transcode_ac3plus, None))
 			if SystemInfo["CanAACTranscode"]:
 				choice_list = [("off", _("off")), ("ac3", _("AC3")), ("dts", _("DTS"))]
 				self.settings.transcode_aac = ConfigSelection(choices = choice_list, default = "off")
