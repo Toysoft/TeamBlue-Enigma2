@@ -95,11 +95,6 @@ class AudioSelection(Screen, ConfigListScreen):
 				self.settings.downmix.addNotifier(self.changeAC3Downmix, initial_call = False)
 				conflist.append(getConfigListEntry(_("Multi channel downmix"), self.settings.downmix))
 				self["key_red"].setBoolean(True)
-			if SystemInfo["CanAACTranscode"]:
-				choice_list = [("off", _("off")), ("ac3", _("AC3")), ("dts", _("DTS"))]
-				self.settings.transcode_aac = ConfigSelection(choices = choice_list, default = "off")
-				self.settings.transcode_aac.addNotifier(self.setAACTranscode, initial_call = False)
-				conflist.append(getConfigListEntry(_("AAC transcoding"), self.settings.transcode_aac, None))
 			if n > 0:
 				self.audioChannel = service.audioChannel()
 				if self.audioChannel:
