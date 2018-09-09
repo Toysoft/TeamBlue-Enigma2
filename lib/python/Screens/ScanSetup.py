@@ -1492,7 +1492,13 @@ class ScanSetup(ConfigListScreen, Screen, CableTransponderSearchSupport, Terrest
 		if tp[3] in range (4) and tp[4] in range (11):
 			pol_list = ['H','V','L','R']
 			fec_list = ['Auto','1/2','2/3','3/4','5/6','7/8','8/9','3/5','4/5','9/10','None']
-			return str(tp[1] / 1000) + " " + pol_list[tp[3]] + " " + str(tp[2] / 1000) + " " + fec_list[tp[4]]
+			tp_text = str(tp[1] / 1000) + " " + pol_list[tp[3]] + " " + str(tp[2] / 1000) + " " + fec_list[tp[4]]
+			if tp[5] == eDVBFrontendParametersSatellite.System_DVB_S2:
+				if tp[10] > eDVBFrontendParametersSatellite.No_Stream_Id_Filter:
+					tp_text = ("%s MIS %d") % (tp_text, tp[10])
+				if tp[12] > 0:
+					tp_text = ("%s Gold %d") % (tp_text, tp[12])
+			return tp_text
 		return _("Invalid transponder data")
 
 	def compareTransponders(self, tp, compare):
