@@ -6,7 +6,7 @@
 
 > [https://github.com/oe-alliance/oe-alliance-core/tree/nextp3](https://github.com/oe-alliance/oe-alliance-core/tree/nextp3 "OE-Alliance")
 > 
-> [https://github.com/teamblue-e2/enigma2/tree/master](https://github.com/teamblue-e2/enigma2/tree/master "teamBlue E2")
+> [https://github.com/teamblue-e2/enigma2/tree/6.3](https://github.com/teamblue-e2/enigma2/tree/6.3 "teamBlue E2")
 > 
 > [https://github.com/teamblue-e2/skin/tree/master](https://github.com/teamblue-e2/skin/tree/master "teamBlue Skin")
 
@@ -19,7 +19,7 @@
 
 1 - Install packages on your buildserver
 
-    sudo apt-get install -y autoconf automake bison bzip2 chrpath coreutils curl cvs default-jre default-jre-headless diffstat flex g++ gawk gcc gettext git-core gzip help2man htop info java-common libc6-dev libglib2.0-dev libperl4-corelibs-perl libproc-processtable-perl libtool libxml2-utils make ncdu ncurses-bin ncurses-dev patch perl pkg-config po4a python-setuptools quilt sgmltools-lite sshpass subversion swig tar texi2html texinfo wget xsltproc zip zlib1g-dev
+    sudo apt-get install -y autoconf automake bison bzip2 chrpath coreutils curl cvs default-jre default-jre-headless diffstat flex g++ gawk gcc gettext git-core gzip help2man htop info java-common libc6-dev libglib2.0-dev libperl4-corelibs-perl libproc-processtable-perl libssl-dev libtool libxml2-utils make ncdu ncurses-bin ncurses-dev patch perl pkg-config po4a python-setuptools quilt sgmltools-lite sshpass subversion swig tar texi2html texinfo wget xsltproc zip zlib1g-dev
 
 ----------
 2 - Set your shell to /bin/bash
