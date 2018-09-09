@@ -6,7 +6,7 @@
 
 > [https://github.com/oe-alliance/oe-alliance-core/tree/4.2](https://github.com/oe-alliance/oe-alliance-core/tree/4.2 "OE-Alliance")
 > 
-> [https://github.com/teamblue-e2/enigma2/tree/master](https://github.com/teamblue-e2/enigma2/tree/6.1 "teamBlue E2")
+> [https://github.com/teamblue-e2/enigma2/tree/master](https://github.com/teamblue-e2/enigma2/tree/6.2 "teamBlue E2")
 > 
 > [https://github.com/teamblue-e2/skin/tree/master](https://github.com/teamblue-e2/skin/tree/master "teamBlue Skin")
 
