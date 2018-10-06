@@ -1,6 +1,6 @@
 ## Our buildserver is currently running on: ##
 
-> Ubuntu 16.04.1 LTS (GNU/Linux 3.14.32-xxxx-grs-ipv6-64 x86_64)
+> Ubuntu 16.04.5 LTS (GNU/Linux 4.9.58-xxxx-std-ipv6-64 x86_64)
 
 ## teamBlue 6.3 (based on openPLi) is build using oe-alliance build-environment "nextp3" and several git repositories: ##
 
