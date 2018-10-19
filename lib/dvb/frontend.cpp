@@ -608,7 +608,7 @@ int eDVBFrontend::openFrontend()
 			if (ioctl(m_fd, FE_GET_PROPERTY, &cmdseq) >= 0)
 			{
 				m_dvbversion = p.u.data;
-				eDebug("[eDVBFrontend%d] frontend %d has DVB API %02x ", m_dvbid, m_dvbid, m_dvbversion);
+				eDebug("[eDVBFrontend%d] frontend has DVB API %02x ", m_dvbid, m_dvbversion);
 			}
 #endif
 		}
