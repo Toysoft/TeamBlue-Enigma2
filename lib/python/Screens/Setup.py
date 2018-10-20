@@ -182,6 +182,9 @@ class Setup(ConfigListScreen, Screen):
 				if not isinstance(item, ConfigNothing):
 					list.append((item_text, item, item_description))
 
+	def run(self):
+		self.keySave()
+
 def getSetupTitle(id):
 	xmldata = setupdom.getroot()
 	for x in xmldata.findall("setup"):
