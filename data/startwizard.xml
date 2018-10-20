@@ -227,6 +227,20 @@ self.selectKey("RIGHT")
 			</code>
 		</step>
 
+		<step id="fallbacktuner">
+			<condition>
+from Components.NimManager import nimmanager
+self.condition = not nimmanager.somethingConnected() and config.misc.installwizard.hasnetwork.value and config.misc.installwizard.ipkgloaded.value
+			</condition>
+			<text value="Please configure the fallback tuner setup?" />
+			<config screen="SetupFallbacktuner" module="SetupFallbacktuner" type="ConfigList" />
+			<code>
+self.clearSelectedKeys()
+self.selectKey("LEFT")
+self.selectKey("RIGHT")
+			</code>
+		</step>
+
 		<step id="scanquestion">
 			<text value="Do you want to do a service scan?" />
 			<condition>
@@ -235,13 +249,14 @@ self.condition = nimmanager.somethingConnected() and not config.misc.installwiza
 			</condition>
 			<code>
 self.hideRc()
-			</code>	
+			</code>
 			<list>
 				<listentry caption="No, scan later manually" step="plugins" />
 				<listentry caption="Yes, do an automatic scan now" step="scan" />
 				<listentry caption="Yes, do a manual scan now" step="manualscan" />
 			</list>
 		</step>
+
 		<step id="scan" nextstep="plugins">
 			<condition>
 from Components.NimManager import nimmanager
@@ -338,6 +353,7 @@ self.clearSelectedKeys()
 self.selectKey("OK")
 			</code>
 		</step>
+
 		<step id="end" laststep="true">
 			<condition>
 self.condition = self.isLastWizard
@@ -348,4 +364,5 @@ self.clearSelectedKeys()
 self.selectKey("OK")
 			</code>
 		</step>
+
 </wizard>
