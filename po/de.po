@@ -1193,7 +1193,7 @@ msgid "Are you sure you want to exit this wizard?"
 msgstr "Sind Sie sicher, dass Sie diesen Assistenten verlassen möchten?"
 
 msgid "Are you sure you want to reload the EPG data from:\n"
-msgstr "Sind Sie sicher, dass Sie die EPG Daten löschen neu laden möchten:\n"
+msgstr "Sind Sie sicher, dass Sie die EPG Daten neu laden möchten:\n"
 
 msgid ""
 "Are you sure you want to restart your network interfaces?\n"
