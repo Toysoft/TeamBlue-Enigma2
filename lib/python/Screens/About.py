@@ -113,6 +113,17 @@ class About(Screen):
 		self["ChipsetInfo"] = StaticText(ChipsetInfo)
 		AboutText += ChipsetInfo + "\n"
 
+		if boxtype == 'gbquad4k' or boxtype == 'gbue4k':
+			def strip_non_ascii(boltversion):
+				''' Returns the string without non ASCII characters'''
+				stripped = (c for c in boltversion if 0 < ord(c) < 127)
+				return ''.join(stripped)
+			boltversion = str(popen('cat /sys/firmware/devicetree/base/bolt/tag').read().strip())
+			boltversion = strip_non_ascii(boltversion)
+			AboutText += _("Bolt") + ":" + boltversion + "\n"
+			self["BoltVersion"] = StaticText(boltversion)
+
+
 		AboutText += _("Enigma (re)starts: %d\n") % config.misc.startCounter.value
 
 		fp_version = getFPVersion()
