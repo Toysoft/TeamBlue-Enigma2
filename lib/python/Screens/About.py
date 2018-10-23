@@ -120,8 +120,8 @@ class About(Screen):
 				return ''.join(stripped)
 			boltversion = str(popen('cat /sys/firmware/devicetree/base/bolt/tag').read().strip())
 			boltversion = strip_non_ascii(boltversion)
-			AboutText += _("bootloader version") + ":" + boltversion + "\n"
-			self["bootloader"] = StaticText(boltversion)
+			AboutText += _("Bolt") + ":" + boltversion + "\n"
+			self["BoltVersion"] = StaticText(boltversion)
 
 
 		AboutText += _("Enigma (re)starts: %d\n") % config.misc.startCounter.value
