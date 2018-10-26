@@ -337,7 +337,7 @@ class CommitInfo(Screen):
 			#("organisation",  "repository",           "readable name",                "branch", "github/gitlab"),
 			("teamblue-e2",      "enigma2",               "teamBlue Enigma2",             "6.3", "github"),
 			("teamblue-e2",      "skin",             "teamBlue Skin GigaBlue Pax",   "master", "github"),
-			("oe-alliance",   "oe-alliance-core",     "OE Alliance Core",             "nextp3", "github"),
+			("oe-alliance",   "oe-alliance-core",     "OE Alliance Core",             "4.3", "github"),
 			("oe-alliance",   "oe-alliance-plugins",  "OE Alliance Plugins",          "master", "github"),
 			("oe-alliance",   "enigma2-plugins",      "OE Alliance Enigma2 Plugins",  "master", "github")
 		]
