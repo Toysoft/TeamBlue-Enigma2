@@ -2,6 +2,7 @@ from enigma import eConsoleAppContainer
 from Screens.Screen import Screen
 from Components.ActionMap import ActionMap
 from Components.ScrollLabel import ScrollLabel
+from Components.Sources.StaticText import StaticText
 
 class Console(Screen):
 	#TODO move this to skin.xml
@@ -23,7 +24,8 @@ class Console(Screen):
 
 		self.Shown = True
 		self["text"] = ScrollLabel("")
-		self["actions"] = ActionMap(["ColorActions", "WizardActions", "DirectionActions"], 
+		self["key_red"] = StaticText(_("Cancel"))
+		self["actions"] = ActionMap(["ColorActions", "WizardActions", "DirectionActions"],
 		{
 			"ok": self.cancel,
 			"back": self.cancel,
