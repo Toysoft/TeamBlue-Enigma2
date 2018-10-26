@@ -4,7 +4,7 @@
 
 ## teamBlue 6.3 (based on openPLi) is build using oe-alliance build-environment "nextp3" and several git repositories: ##
 
-> [https://github.com/oe-alliance/oe-alliance-core/tree/nextp3](https://github.com/oe-alliance/oe-alliance-core/tree/nextp3 "OE-Alliance")
+> [https://github.com/oe-alliance/oe-alliance-core/tree/4.3](https://github.com/oe-alliance/oe-alliance-core/tree/4.3 "OE-Alliance")
 > 
 > [https://github.com/teamblue-e2/enigma2/tree/6.3](https://github.com/teamblue-e2/enigma2/tree/6.3 "teamBlue E2")
 > 
@@ -56,7 +56,7 @@
 ----------
 8 - Clone oe-alliance git
 
-    git clone git://github.com/oe-alliance/build-enviroment.git -b nextp3
+    git clone git://github.com/oe-alliance/build-enviroment.git -b 4.3
 
 ----------
 9 - Switch to folder build-enviroment
