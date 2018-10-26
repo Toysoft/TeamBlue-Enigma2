@@ -2,7 +2,7 @@
 
 > Ubuntu 16.04.5 LTS (GNU/Linux 4.9.58-xxxx-std-ipv6-64 x86_64)
 
-## teamBlue 6.3 (based on openPLi) is build using oe-alliance build-environment "nextp3" and several git repositories: ##
+## teamBlue 6.3 (based on openPLi) is build using oe-alliance build-environment "4.3" and several git repositories: ##
 
 > [https://github.com/oe-alliance/oe-alliance-core/tree/4.3](https://github.com/oe-alliance/oe-alliance-core/tree/4.3 "OE-Alliance")
 > 
