@@ -4809,7 +4809,7 @@ msgstr ""
 msgid "Fullbackup on %s"
 msgstr ""
 
-msgid "Fulview resulution"
+msgid "Full view resolution"
 msgstr "Fullbildsupplösning"
 
 msgid "Function of OK button"

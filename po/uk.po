@@ -4329,7 +4329,7 @@ msgstr "Повна резервна копія на HDD"
 msgid "Fullbackup on %s"
 msgstr "Повна резервна копія на HDD"
 
-msgid "Fulview resulution"
+msgid "Full view resolution"
 msgstr "Повна роздільна здатність перегляду"
 
 msgid "Function of OK button"

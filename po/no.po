@@ -4712,7 +4712,7 @@ msgstr ""
 msgid "Fullbackup on %s"
 msgstr ""
 
-msgid "Fulview resulution"
+msgid "Full view resolution"
 msgstr "Fullskjermsoppløsning"
 
 msgid "Function of OK button"

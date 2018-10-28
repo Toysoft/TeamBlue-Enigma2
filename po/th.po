@@ -4321,7 +4321,7 @@ msgstr ""
 msgid "Fullbackup on %s"
 msgstr ""
 
-msgid "Fulview resulution"
+msgid "Full view resolution"
 msgstr ""
 
 msgid "Function of OK button"
