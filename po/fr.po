@@ -4232,7 +4232,7 @@ msgstr "Sauvegarde complète pour %s\n"
 msgid "Fullbackup on %s"
 msgstr "Sauvegarde complète sur %s"
 
-msgid "Fulview resulution"
+msgid "Full view resolution"
 msgstr "Résolution plein écran"
 
 msgid "Function of OK button"

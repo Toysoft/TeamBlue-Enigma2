@@ -15,7 +15,7 @@ metadir = $(datadir)/meta
 meta_DATA = index-enigma2.xml
 CLEANFILES = index-enigma2.xml
 
-EXTRA_DIST = lamedb
+EXTRA_DIST = lamedb lamedb5
 
 index-enigma2.xml: $(top_srcdir)/tools/genmetaindex.py $(top_srcdir)/lib/python/Plugins/*/*/meta/plugin_*.xml
 	$(AM_V_GEN)$(PYTHON) $^ > $@

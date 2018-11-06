@@ -4149,7 +4149,7 @@ msgstr "Fullback for %s\n"
 msgid "Fullbackup on %s"
 msgstr "Fullbackup on %s"
 
-msgid "Fulview resulution"
+msgid "Full view resolution"
 msgstr "Tam görünüm çözünürlüğü"
 
 msgid "Function of OK button"

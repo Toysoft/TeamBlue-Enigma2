@@ -4910,7 +4910,7 @@ msgstr ""
 msgid "Fullbackup on %s"
 msgstr ""
 
-msgid "Fulview resulution"
+msgid "Full view resolution"
 msgstr "Resolução em vista completa"
 
 msgid "Function of OK button"
