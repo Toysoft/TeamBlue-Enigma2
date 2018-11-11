@@ -3,9 +3,7 @@ from config import config, ConfigSelection, ConfigYesNo, ConfigSubsection, Confi
 from enigma import eTimer, eHdmiCEC, eActionMap
 from Tools.StbHardware import getFPWasTimerWakeup
 import NavigationInstance
-
-# sys.maxint on 64bit (2**63-1) fails with OverflowError on eActionMap.bindAction use 32bit value (2**31-1)
-maxint = 2147483647
+from sys import maxint
 
 LOGPATH="/hdd/"
 LOGFILE="hdmicec.log"

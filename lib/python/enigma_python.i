@@ -145,6 +145,7 @@ typedef long time_t;
 %include <enigma2_config.h>
 %include "typemaps.i"
 %include "std_string.i"
+%include "stdint.i"
 %include <lib/python/swig.h>
 %include <lib/base/object.h>
 %include <lib/base/eenv.h>
