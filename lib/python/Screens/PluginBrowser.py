@@ -10,6 +10,7 @@ from Components.PluginComponent import plugins
 from Components.PluginList import *
 from Components.Label import Label
 from Components.Pixmap import Pixmap
+from Components.ServiceList import refreshServiceList
 from Components.Harddisk import harddiskmanager
 from Components.Sources.StaticText import StaticText
 from Components import Ipkg
@@ -404,6 +405,9 @@ class PluginDownloadBrowser(Screen):
 			self["text"].setText(_("Reloading bouquets and services..."))
 			eDVBDB.getInstance().reloadBouquets()
 			eDVBDB.getInstance().reloadServicelist()
+			from Components.ParentalControl import parentalControl
+			parentalControl.open()
+			refreshServiceList()
 		plugins.readPluginList(resolveFilename(SCOPE_PLUGINS))
 		self.container.appClosed.remove(self.runFinished)
 		self.container.dataAvail.remove(self.dataAvail)
