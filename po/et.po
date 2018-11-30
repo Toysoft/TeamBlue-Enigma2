@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: enigma2 teamBlue\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-05-28 14:28+0200\n"
+"POT-Creation-Date: 2018-11-30 19:40+0100\n"
 "PO-Revision-Date: 2015-01-29 17:40+0200\n"
 "Last-Translator: arn354 <arn354@email.de>\n"
 "Language-Team: none\n"
@@ -82,6 +82,12 @@ msgid ""
 msgstr ""
 "\n"
 "Jätkamiseks vajuta OK."
+
+#, fuzzy
+msgid ""
+"\n"
+"Press OK or Exit to abort!"
+msgstr "Otsingu alustamiseks vajuta OK"
 
 #, fuzzy
 msgid ""
@@ -818,11 +824,23 @@ msgstr ""
 msgid "AAC downmix"
 msgstr "AC3/DTS > stereo"
 
+#, fuzzy
+msgid "AAC plus downmix"
+msgstr "AC3/DTS > stereo"
+
+#, fuzzy
+msgid "AAC transcoding"
+msgstr "Tõlge:"
+
 msgid "AC3"
 msgstr ""
 
 #, fuzzy
 msgid "AC3 downmix"
+msgstr "AC3/DTS > stereo"
+
+#, fuzzy
+msgid "AC3 plus downmix"
 msgstr "AC3/DTS > stereo"
 
 msgid "ACQUIRING TSID/ONID"
@@ -1040,6 +1058,10 @@ msgstr ""
 msgid "All satellites 4 (USALS)"
 msgstr ""
 
+#, fuzzy
+msgid "All services provider"
+msgstr "Määratud kanalid/levitajad:"
+
 msgid "Allocate"
 msgstr "Eralda"
 
@@ -1047,6 +1069,12 @@ msgid "Allocate a number to the physical LNB you are configuring. You will be ab
 msgstr ""
 
 msgid "Allocate unused memory index"
+msgstr ""
+
+msgid "Allow 10bit"
+msgstr ""
+
+msgid "Allow 12bit"
 msgstr ""
 
 #, fuzzy
@@ -1331,6 +1359,10 @@ msgid "Australia"
 msgstr "Itaalia"
 
 #, fuzzy
+msgid "Australian"
+msgstr "Itaalia"
+
+#, fuzzy
 msgid "Austria"
 msgstr "ratsutamine"
 
@@ -1398,6 +1430,10 @@ msgid "Autostart:"
 msgstr "algamas"
 
 msgid "Available format variables"
+msgstr "Võimalikud formati muutujad"
+
+#, fuzzy
+msgid "Available locales are:"
 msgstr "Võimalikud formati muutujad"
 
 msgid "Azerbaijan"
@@ -1523,6 +1559,10 @@ msgstr "Tegevus taasesituse lõppemisel"
 msgid "Belarus"
 msgstr ""
 
+#, fuzzy
+msgid "Belgian"
+msgstr "Norra"
+
 msgid "Belgium"
 msgstr ""
 
@@ -1561,6 +1601,9 @@ msgid "Blue"
 msgstr ""
 
 msgid "Bolivia (Plurinational State of)"
+msgstr ""
+
+msgid "Bolt"
 msgstr ""
 
 msgid "Bonaire, Sint Eustatius and Saba"
@@ -1741,6 +1784,9 @@ msgstr ""
 
 msgid "Cancel"
 msgstr "Tühista"
+
+msgid "Cancel any text changes and exit"
+msgstr ""
 
 msgid "Cancelled upon user request"
 msgstr ""
@@ -1998,6 +2044,10 @@ msgstr "Lemmiknimekirjad"
 
 msgid "Choose the location for crash and debuglogs."
 msgstr ""
+
+#, fuzzy
+msgid "Choose whether multi channel sound tracks should be convert to PCM or SPDIF."
+msgstr "Määra, kas mitmekanaline heli tuleks taandada stereoks."
 
 msgid "Choose which tuner to configure."
 msgstr "Vali seadistamiseks tuuner."
@@ -2426,6 +2476,18 @@ msgid "Configure whether (and for how long) a second infobar will be shown when 
 msgstr "Luba teise inforiba näitamine (2 X OK). Seal võib leida käesoleva kanali kohta rohkem teavet."
 
 #, fuzzy
+msgid "Configure whether AAC sound tracks should be transcoded."
+msgstr "Määra, kas mitmekanaline heli tuleks taandada stereoks."
+
+#, fuzzy
+msgid "Configure whether DTS-HD channel sound tracks should be downmixed or transcoded."
+msgstr "Määra, kas mitmekanaline heli tuleks taandada stereoks."
+
+#, fuzzy
+msgid "Configure whether WMA pro channel sound tracks should be downmixed or transcoded."
+msgstr "Määra, kas mitmekanaline heli tuleks taandada stereoks."
+
+#, fuzzy
 msgid "Configure whether a simple second infobar will be shown instead of the regular one."
 msgstr "Määra, kas mitmekanaline heli tuleks taandada stereoks."
 
@@ -2520,7 +2582,7 @@ msgstr ""
 msgid "Constellation & FFT mode"
 msgstr "Konstellatsioon"
 
-msgid "Consult your Unicable device spec sheet for this information."
+msgid "Consult your SCR device spec sheet for this information."
 msgstr ""
 
 msgid "Consult your motor's spec sheet for this information, or leave the default setting."
@@ -2547,9 +2609,6 @@ msgstr "Sisu ei mahu DVD-le!"
 
 msgid "Continue"
 msgstr "Jätka"
-
-msgid "Continue in background"
-msgstr "Jätka taustal"
 
 msgid "Continue playback"
 msgstr "Jätka taasesitust"
@@ -2608,6 +2667,9 @@ msgstr "Kehtetu kanal %s. Salvestamine nurjus."
 #, fuzzy
 msgid "Country"
 msgstr "Haagi lahti"
+
+msgid "Cover dashed flickering line for this service"
+msgstr ""
 
 #, fuzzy
 msgid "Create"
@@ -2756,6 +2818,10 @@ msgstr ""
 
 msgid "DTS"
 msgstr ""
+
+#, fuzzy
+msgid "DTS HD downmix"
+msgstr "AC3/DTS > stereo"
 
 #, fuzzy
 msgid "DTS downmix"
@@ -2934,6 +3000,12 @@ msgstr "Kustuta esitusloendi kirje"
 
 msgid "Delete saved playlist"
 msgstr "Kustuta salvestatud esitusloend"
+
+msgid "Delete the character to the left of text buffer cursor"
+msgstr ""
+
+msgid "Delete the character under the text buffer cursor"
+msgstr ""
 
 msgid "Delete timer"
 msgstr ""
@@ -3371,6 +3443,10 @@ msgid "Downloading plugin information. Please wait..."
 msgstr "Laeme alla laienduse infot. Palun oota."
 
 #, fuzzy
+msgid "Downmix"
+msgstr "AC3/DTS > stereo"
+
+#, fuzzy
 msgid "Dreambox format data DVD (HDTV compatible)"
 msgstr "eri vormingus data DVD"
 
@@ -3656,6 +3732,10 @@ msgid "Enigma2 Version: %s"
 msgstr ""
 
 #, fuzzy
+msgid "Enter"
+msgstr "keskel"
+
+#, fuzzy
 msgid "Enter IP address"
 msgstr "IP aadress"
 
@@ -3682,6 +3762,10 @@ msgstr "Sisesta pin kood"
 
 msgid "Enter pin code"
 msgstr "Sisesta pin kood"
+
+#, fuzzy
+msgid "Enter text and exit"
+msgstr "salvesta esitusloend"
 
 msgid "Enter the frequency at which you LNB switches between low band and high band. For more information consult the spec sheet of your LNB."
 msgstr ""
@@ -4284,15 +4368,15 @@ msgstr "Hoia pilti"
 msgid "Full transparency"
 msgstr "Täiesti läbipaistev"
 
+msgid "Full view resolution"
+msgstr ""
+
 #, python-format
 msgid "Fullback for %s\n"
 msgstr ""
 
 #, python-format
 msgid "Fullbackup on %s"
-msgstr ""
-
-msgid "Full view resolution"
 msgstr ""
 
 msgid "Function of OK button"
@@ -4472,6 +4556,9 @@ msgstr "Kreeka"
 msgid "Greek"
 msgstr "Kreeka"
 
+msgid "Greek (Modern)"
+msgstr ""
+
 #, fuzzy
 msgid "Green"
 msgstr "Kreeka"
@@ -4555,6 +4642,10 @@ msgstr "Salvestus"
 msgid "HDMI allow unsupported modes"
 msgstr ""
 
+#, fuzzy
+msgid "HDMI audio source"
+msgstr "Värvi vorming"
+
 msgid "HDMI bypass EDID checking"
 msgstr ""
 
@@ -4577,11 +4668,22 @@ msgid "HDR10"
 msgstr ""
 
 #, fuzzy
+msgid "HDR10 support"
+msgstr "pole toetatud"
+
+msgid "HELP"
+msgstr ""
+
+#, fuzzy
 msgid "HI-cleanup for external subtitles"
 msgstr "Väliste subtiitrite viide"
 
 msgid "HLG"
 msgstr ""
+
+#, fuzzy
+msgid "HLG support"
+msgstr "pole toetatud"
 
 #, fuzzy
 msgid "Haiti"
@@ -4751,6 +4853,12 @@ msgstr "C"
 msgid "IDLE"
 msgstr ""
 
+msgid "INFO"
+msgstr ""
+
+msgid "INS"
+msgstr ""
+
 msgid "IP address"
 msgstr "IP aadress"
 
@@ -4891,6 +4999,10 @@ msgstr "Kaasa AIT http voogudesse"
 #, fuzzy
 msgid "Include AIT in recordings"
 msgstr "Kaasa AIT http voogudesse"
+
+#, fuzzy
+msgid "Include CI assignment"
+msgstr "CI määrangud"
 
 msgid "Include ECM in http streams"
 msgstr "Kaasa ECM http voogudesse"
@@ -5126,6 +5238,9 @@ msgstr "Ipkg"
 msgid "Iran (Islamic Republic of)"
 msgstr ""
 
+msgid "Iran, Islamic Republic"
+msgstr ""
+
 msgid "Iraq"
 msgstr ""
 
@@ -5239,6 +5354,10 @@ msgstr "Klaviatuur"
 
 msgid "Keyboard"
 msgstr "Klaviatuur"
+
+#, fuzzy
+msgid "Keyboard data entry"
+msgstr "Klaviatuuriseaded"
 
 msgid "Keyboard map"
 msgstr "Klaviatuur"
@@ -5466,6 +5585,10 @@ msgstr ""
 msgid "Local network"
 msgstr "Kohalik võrk"
 
+#, fuzzy
+msgid "Locale"
+msgstr "Asukoht"
+
 msgid "Location"
 msgstr "Asukoht"
 
@@ -5503,6 +5626,9 @@ msgid "Longitude"
 msgstr "Pikkuskraad"
 
 msgid "Lower Framerate save CPU Time"
+msgstr ""
+
+msgid "Lower case"
 msgstr ""
 
 #, fuzzy
@@ -5615,9 +5741,6 @@ msgstr "Salvestuse algusesse lisatakse (minutit)"
 msgid "Mark service as dedicated 3D service"
 msgstr ""
 
-msgid "Mark service to hide VBI line"
-msgstr ""
-
 msgid "Marshall Islands"
 msgstr ""
 
@@ -5700,12 +5823,6 @@ msgstr ""
 msgid "MiniTV - video0"
 msgstr ""
 
-msgid "MiniTV - video0+video1"
-msgstr ""
-
-msgid "MiniTV - video1"
-msgstr ""
-
 msgid "MiniTV framerate"
 msgstr ""
 
@@ -5713,12 +5830,6 @@ msgid "MiniTV on frontpanel"
 msgstr ""
 
 msgid "MiniTV with OSD - video0+fb"
-msgstr ""
-
-msgid "MiniTV with OSD - video0+video1+fb"
-msgstr ""
-
-msgid "MiniTV with OSD - video1+fb"
 msgstr ""
 
 #, python-format
@@ -5871,6 +5982,30 @@ msgstr "Ava pilt-pildis"
 msgid "Move east"
 msgstr "Liiguta itta"
 
+msgid "Move the text buffer cursor left"
+msgstr ""
+
+msgid "Move the text buffer cursor right"
+msgstr ""
+
+msgid "Move the text buffer cursor to the first character"
+msgstr ""
+
+msgid "Move the text buffer cursor to the last character"
+msgstr ""
+
+msgid "Move the virtual keyboard cursor down"
+msgstr ""
+
+msgid "Move the virtual keyboard cursor left"
+msgstr ""
+
+msgid "Move the virtual keyboard cursor right"
+msgstr ""
+
+msgid "Move the virtual keyboard cursor up"
+msgstr ""
+
 msgid "Move to position X"
 msgstr "Liigu asukohta X"
 
@@ -5891,10 +6026,6 @@ msgstr "Filmilisti seaded"
 
 msgid "Movie location"
 msgstr "Salvestiste asukoht"
-
-#, fuzzy
-msgid "Movie manager"
-msgstr "Seadme nimi:"
 
 msgid "Movie selection"
 msgstr "Filmi valik"
@@ -6443,6 +6574,9 @@ msgstr "Näita kanalivalikus kanalinumbreid"
 msgid "Number of repeating text on display."
 msgstr ""
 
+msgid "Number or SMS style data entry"
+msgstr ""
+
 msgid "OK"
 msgstr "OK"
 
@@ -6467,6 +6601,9 @@ msgstr "Ekraanigraafika seaded"
 
 msgid "OSD transparency"
 msgstr "Ekraanigraafika läbipaistvus"
+
+msgid "OVR"
+msgstr ""
 
 msgid "Off"
 msgstr "Väljas"
@@ -6509,7 +6646,7 @@ msgstr "Ebalineaarne"
 msgid "Online = Download a image and flash it"
 msgstr ""
 
-msgid "Only change this setting if you are using a Unicable device that has been reprogrammed with a custom programmer. For further information check with the person that reprogrammed the device."
+msgid "Only change this setting if you are using a SCR device that has been reprogrammed with a custom programmer. For further information check with the person that reprogrammed the device."
 msgstr ""
 
 msgid "Only extensions."
@@ -6632,6 +6769,9 @@ msgstr "Kas tarkvara uuendamisel kirjutada üle konfiguratsioonifailid?"
 msgid "PAL"
 msgstr "PAL"
 
+msgid "PCM"
+msgstr ""
+
 msgid "PCR PID"
 msgstr "PCR PID"
 
@@ -6742,6 +6882,9 @@ msgstr "Otsing..."
 #, fuzzy
 msgid "Partitions"
 msgstr "Polarisatsioon"
+
+msgid "Passthrough"
+msgstr ""
 
 msgid "Pause"
 msgstr "Paus"
@@ -6865,6 +7008,9 @@ msgid ""
 msgstr ""
 "Kontrolli ja täida nimeserveri nõutavad väljad.\n"
 "Kui oled valmis, vajuta jätkamiseks OK."
+
+msgid "Please configure the fallback tuner setup?"
+msgstr ""
 
 msgid ""
 "Please configure your internet connection by filling out the required values.\n"
@@ -7025,6 +7171,9 @@ msgstr "Häälesta tuuner A"
 #, fuzzy
 msgid "Please set up tuner K"
 msgstr "Häälesta tuuner A"
+
+msgid "Please setup the following basic configs!"
+msgstr ""
 
 msgid ""
 "Please use direction keys to move the PiP window.\n"
@@ -8305,6 +8454,9 @@ msgstr ""
 msgid "Select 'A' or 'B' if your aerial system requires this, otherwise select 'none'. If you are unsure select 'none'."
 msgstr ""
 
+msgid "Select 'FBC SCR' if this tuner will connect to a SCR (Unicable/JESS) device. For all other setups select 'FBC automatic'."
+msgstr ""
+
 msgid "Select 'band' if using a 'universal' LNB, otherwise consult your LNB spec sheet."
 msgstr ""
 
@@ -8317,7 +8469,7 @@ msgstr ""
 msgid "Select 'provider' to scan from the predefined list of cable multiplexes. Select 'bands' to only scan certain parts of the spectrum. Select 'steps' to scan in steps of a particular frequency bandwidth."
 msgstr ""
 
-msgid "Select 'yes' if this tuner is connected to the Unicable device through another tuner, otherwise select 'no'."
+msgid "Select 'yes' if this tuner is connected to the SCR device through another tuner, otherwise select 'no'."
 msgstr ""
 
 msgid "Select 'yes' to choose what bands or step sizes will be scanned."
@@ -8465,6 +8617,10 @@ msgid "Select interface"
 msgstr "Vali liides"
 
 #, fuzzy
+msgid "Select locale"
+msgstr "Varukoopia asukoht"
+
+#, fuzzy
 msgid "Select location"
 msgstr "Varukoopia asukoht"
 
@@ -8511,20 +8667,29 @@ msgstr "Vali sihtkataloog"
 msgid "Select the Swap File Size:"
 msgstr ""
 
-msgid "Select the Unicable channel to be assigned to this tuner. This is a unique value. Be certain that no other device connected to this same Unicable system is allocated to the same Unicable channel."
+msgid "Select the User Band channel to be assigned to this tuner. This is an index into the table of frequencies the SCR switch or SCR LNB uses to pass the requested transponder to the tuner."
 msgstr ""
 
-msgid "Select the format of your Unicable device. Choices are 'SCR Unicable' (Unicable I format), or 'SCR JESS' (Unicable II format)."
+msgid "Select the User Band frequency to be assigned to this tuner. This is the frequency the SCR switch or SCR LNB uses to pass the requested transponder to the tuner."
 msgstr ""
 
-msgid "Select the manufacturer of your Unicable device. If the manufacturer is not listed, set 'SCR' to 'user defined' and enter the device parameters manually according to its spec sheet."
+msgid "Select the User Band to be assigned to this tuner. This is an index into the table of frequencies the SCR switch or SCR LNB uses to pass the requested tranponder to the tuner."
 msgstr ""
 
-msgid "Select the model number of your Unicable device. If the model number is not listed, set 'SCR' to 'user defined' and enter the device parameters manually according to its spec sheet."
+msgid "Select the character or action under the virtual keyboard cursor"
+msgstr ""
+
+msgid "Select the manufacturer of your SCR device. If the manufacturer is not listed, set 'SCR' to 'user defined' and enter the device parameters manually according to its spec sheet."
+msgstr ""
+
+msgid "Select the model number of your SCR device. If the model number is not listed, set 'SCR' to 'user defined' and enter the device parameters manually according to its spec sheet."
 msgstr ""
 
 msgid "Select the movie path"
 msgstr "Vali filmi rada"
+
+msgid "Select the protocol used by your SCR device. Choices are 'SCR Unicable' (Unicable), or 'SCR JESS' (JESS, also known as Unicable II)."
+msgstr ""
 
 msgid "Select the satellite which is connected to Port-A of your switch. If you are unsure select 'automatic' and the receiver will attempt to determine this for you. If nothing is connected to this port, select 'nothing connected'."
 msgstr ""
@@ -8550,13 +8715,19 @@ msgstr ""
 msgid "Select the tuner that this loopthrough depends on."
 msgstr ""
 
-msgid "Select the tuner to which the signal cable of the Unicable device is connected."
+msgid "Select the tuner to which the signal cable of the SCR device is connected."
 msgstr ""
 
 msgid "Select the type of LNB/device being used (normally 'Universal'). If your LNB type is not available select 'user defined'."
 msgstr ""
 
-msgid "Select the type of Unicable device you are using."
+msgid "Select the type of Single Cable Reception device you are using."
+msgstr ""
+
+msgid "Select the virtual keyboard locale from a menu"
+msgstr ""
+
+msgid "Select the virtual keyboard shifted character set"
 msgstr ""
 
 msgid "Select upgrade source"
@@ -8720,6 +8891,9 @@ msgstr "Kanalinimi"
 
 msgid "Services"
 msgstr "Kanalid"
+
+msgid "Set CI assignment for detection of available services."
+msgstr ""
 
 #, fuzzy
 msgid "Set PIN"
@@ -9244,13 +9418,13 @@ msgstr ""
 msgid "Skin"
 msgstr "Välimus"
 
+#, python-format
+msgid "Skin & Resolution: %s (%sx%s)"
+msgstr ""
+
 #, fuzzy
 msgid "Skin setup"
 msgstr "Seadistamine"
-
-#, fuzzy
-msgid "Skin: "
-msgstr "Välimus"
 
 msgid "Skins"
 msgstr "Välimus"
@@ -9478,6 +9652,12 @@ msgstr ""
 
 msgid "Spanish"
 msgstr "Hispaania"
+
+msgid "Special 1"
+msgstr ""
+
+msgid "Special 2"
+msgstr ""
 
 msgid "Specify extra timeframe to ignore inactivity sleeptimer"
 msgstr ""
@@ -10227,6 +10407,14 @@ msgstr "Saadaval on vähemalt %s uuendust."
 msgid "There are currently no outstanding actions."
 msgstr "Praegu ei ole täitmata tegevusi."
 
+#, fuzzy
+msgid "There are no saved playlists to delete!"
+msgstr "Vali kustutatav esitusloend"
+
+#, fuzzy
+msgid "There are no saved playlists to load!"
+msgstr "Kustuta salvestatud esitusloend"
+
 msgid "There are no updates available."
 msgstr "Uuendusi ei ole saadaval."
 
@@ -10311,6 +10499,9 @@ msgstr ""
 msgid "This option allows to set the level of dynamic contrast of the picture."
 msgstr ""
 
+msgid "This option allows you can to set the auto volume level."
+msgstr ""
+
 msgid "This option allows you enable smoothing filter to control the dithering process."
 msgstr ""
 
@@ -10347,6 +10538,18 @@ msgstr ""
 msgid "This option allows you to enable 3D surround sound."
 msgstr ""
 
+msgid "This option allows you to enable or disable the 10 bit color mode"
+msgstr ""
+
+msgid "This option allows you to enable or disable the 12 bit color mode"
+msgstr ""
+
+msgid "This option allows you to force the HDR10 modes for UHD"
+msgstr ""
+
+msgid "This option allows you to force the HLG modes for UHD"
+msgstr ""
+
 msgid "This option allows you to hide and sort menu entries. When selecting user you can change order and hide menu items via the blue button"
 msgstr ""
 
@@ -10366,9 +10569,6 @@ msgid "This option allows you to view the old and new settings side by side."
 msgstr ""
 
 msgid "This option can be useful for long HDMI cables."
-msgstr ""
-
-msgid "This option configures you can set auto volume level."
 msgstr ""
 
 msgid "This option set the level of surpression of mosquito noise (Mosquito Noise is random aliasing as a result of strong compression). Obviously this goes at the cost of picture details."
@@ -10614,6 +10814,9 @@ msgstr ""
 msgid "Toggle infoBar"
 msgstr ""
 
+msgid "Toggle new text inserts before or overwrites existing text"
+msgstr ""
+
 msgid "Togo"
 msgstr ""
 
@@ -10855,6 +11058,9 @@ msgstr ""
 msgid "Unattended upgrade without GUI and reboot system"
 msgstr ""
 
+msgid "Uncover dashed flickering line for this service"
+msgstr ""
+
 #, fuzzy
 msgid "Undefined"
 msgstr "määramata"
@@ -10882,6 +11088,15 @@ msgstr "Lapseluku kanali muutmine"
 msgid "Unicable / JESS"
 msgstr "Unicable"
 
+msgid "Unicable delay after change voltage before switch command"
+msgstr ""
+
+msgid "Unicable delay after enable voltage before switch command"
+msgstr ""
+
+msgid "Unicable delay after last diseqc command"
+msgstr ""
+
 msgid "Uninstall"
 msgstr "Eemalda"
 
@@ -10892,6 +11107,9 @@ msgid "United Arab Emirates"
 msgstr ""
 
 msgid "United Kingdom"
+msgstr ""
+
+msgid "United States"
 msgstr ""
 
 msgid "United States Minor Outlying Islands"
@@ -10907,9 +11125,6 @@ msgid "Unknown"
 msgstr "Tundmatu"
 
 msgid "Unmark service as dedicated 3D service"
-msgstr ""
-
-msgid "Unmark service to unhide VBI line"
 msgstr ""
 
 msgid "Unmount"
@@ -10965,6 +11180,9 @@ msgstr ""
 
 msgid "Upgrading"
 msgstr "Uuendan"
+
+msgid "Upper case"
+msgstr ""
 
 msgid "Uruguay"
 msgstr ""
@@ -11132,6 +11350,10 @@ msgstr ""
 msgid "Vanuatu"
 msgstr "juhend"
 
+#, fuzzy
+msgid "Various"
+msgstr "Esita eelmine"
+
 msgid "Venezuela (Bolivarian Republic of)"
 msgstr ""
 
@@ -11269,6 +11491,14 @@ msgstr ""
 msgid "Virgin Islands (U.S.)"
 msgstr ""
 
+#, fuzzy
+msgid "Virtual KeyBoard Functions"
+msgstr "Virtuaalklahvistik"
+
+#, fuzzy
+msgid "Virtual KeyBoard Text:"
+msgstr "Virtuaalklahvistik"
+
 msgid "Virtual keyboard"
 msgstr "Virtuaalklahvistik"
 
@@ -11297,6 +11527,10 @@ msgstr "WEP"
 
 msgid "WLAN connection"
 msgstr "WiFi ühendus"
+
+#, fuzzy
+msgid "WMA pro downmix"
+msgstr "AC3/DTS > stereo"
 
 #, fuzzy
 msgid "WOL standby"
@@ -11719,6 +11953,10 @@ msgstr ""
 
 msgid "Without popup"
 msgstr "Ilma popup aknata"
+
+#, fuzzy
+msgid "Wizard setup"
+msgstr "Video seaded"
 
 msgid "Wizard to arrange the overscan"
 msgstr ""
@@ -12451,6 +12689,13 @@ msgid ""
 "\n"
 msgstr ""
 
+msgid "controlled by HDMI"
+msgstr ""
+
+#, fuzzy
+msgid "convert to multi channel PCM"
+msgstr "Kanal"
+
 msgid "cooking"
 msgstr "kokasaade"
 
@@ -12669,6 +12914,14 @@ msgstr "folk/rahvamuusika"
 msgid "football/soccer"
 msgstr "jalgpall"
 
+#, fuzzy
+msgid "force disabled"
+msgstr "keelatud"
+
+#, fuzzy
+msgid "force enabled"
+msgstr "lubatud"
+
 msgid "foreign countries/expeditions"
 msgstr ""
 
@@ -12714,9 +12967,6 @@ msgstr "kõrgus"
 
 msgid "help..."
 msgstr "abi"
-
-msgid "hide"
-msgstr ""
 
 msgid "horizontal"
 msgstr "horisontaal"
@@ -13227,10 +13477,6 @@ msgstr "käivita vastuvõtja sellel kanalil"
 msgid "settings"
 msgstr "Seaded"
 
-#, fuzzy
-msgid "show"
-msgstr "jutusaade"
-
 msgid "show DVD main menu"
 msgstr "näita DVD peamenüüd"
 
@@ -13406,6 +13652,10 @@ msgstr "määramata"
 msgid "unknown"
 msgstr "tundmatu"
 
+#, fuzzy
+msgid "unknown error"
+msgstr "tundmatu kanal"
+
 msgid "unknown service"
 msgstr "tundmatu kanal"
 
@@ -13418,6 +13668,9 @@ msgstr "Luba"
 
 msgid "until standby/restart"
 msgstr "kuni ooterežiimini/taaskäivitamiseni"
+
+msgid "use best, controlled by HDMI"
+msgstr ""
 
 msgid "user defined"
 msgstr "kasutaja määratud"
