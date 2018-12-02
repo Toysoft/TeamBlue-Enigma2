@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: enigma2 teamBlue\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-05-28 14:28+0200\n"
+"POT-Creation-Date: 2018-11-30 19:40+0100\n"
 "PO-Revision-Date: 2015-01-29 17:40+0200\n"
 "Last-Translator: arn354 <arn354@email.de>\n"
 "Language-Team: none\n"
@@ -75,6 +75,12 @@ msgid ""
 msgstr ""
 "\n"
 "กดปุ่ม OK ที่รีโมท เพื่อทำต่อ"
+
+#, fuzzy
+msgid ""
+"\n"
+"Press OK or Exit to abort!"
+msgstr "กดปุ่ม OK เพื่อเริ่มค้นหา"
 
 #, fuzzy
 msgid ""
@@ -786,10 +792,20 @@ msgstr ""
 msgid "AAC downmix"
 msgstr ""
 
+msgid "AAC plus downmix"
+msgstr ""
+
+#, fuzzy
+msgid "AAC transcoding"
+msgstr "การแปล:"
+
 msgid "AC3"
 msgstr ""
 
 msgid "AC3 downmix"
+msgstr ""
+
+msgid "AC3 plus downmix"
 msgstr ""
 
 msgid "ACQUIRING TSID/ONID"
@@ -1026,6 +1042,10 @@ msgstr ""
 msgid "All satellites 4 (USALS)"
 msgstr ""
 
+#, fuzzy
+msgid "All services provider"
+msgstr "กำหนดบริการ/ผู้ให้บริการr:"
+
 msgid "Allocate"
 msgstr ""
 
@@ -1033,6 +1053,12 @@ msgid "Allocate a number to the physical LNB you are configuring. You will be ab
 msgstr ""
 
 msgid "Allocate unused memory index"
+msgstr ""
+
+msgid "Allow 10bit"
+msgstr ""
+
+msgid "Allow 12bit"
 msgstr ""
 
 msgid "Allow quitting movieplayer with exit"
@@ -1323,6 +1349,10 @@ msgstr "แก้ไขการตั้งค่า"
 msgid "Australia"
 msgstr "ภาษาอิตาลี่"
 
+#, fuzzy
+msgid "Australian"
+msgstr "ภาษาอิตาลี่"
+
 msgid "Austria"
 msgstr ""
 
@@ -1391,6 +1421,10 @@ msgid "Autostart:"
 msgstr "กำลังจะเริ่ม"
 
 msgid "Available format variables"
+msgstr "รูปแบบที่ใช้งานได้"
+
+#, fuzzy
+msgid "Available locales are:"
 msgstr "รูปแบบที่ใช้งานได้"
 
 msgid "Azerbaijan"
@@ -1518,6 +1552,10 @@ msgstr "เมื่อเมื่อภาพยนต์จบ ให้"
 msgid "Belarus"
 msgstr ""
 
+#, fuzzy
+msgid "Belgian"
+msgstr "ภาษานอร์เว"
+
 msgid "Belgium"
 msgstr ""
 
@@ -1556,6 +1594,9 @@ msgid "Blue"
 msgstr ""
 
 msgid "Bolivia (Plurinational State of)"
+msgstr ""
+
+msgid "Bolt"
 msgstr ""
 
 msgid "Bonaire, Sint Eustatius and Saba"
@@ -1736,6 +1777,9 @@ msgstr ""
 
 msgid "Cancel"
 msgstr "ยกเลิก"
+
+msgid "Cancel any text changes and exit"
+msgstr ""
 
 msgid "Cancelled upon user request"
 msgstr ""
@@ -1996,6 +2040,9 @@ msgid "Choose bouquet"
 msgstr "คัดลอกเข้าสู่กลุ่มรายการ"
 
 msgid "Choose the location for crash and debuglogs."
+msgstr ""
+
+msgid "Choose whether multi channel sound tracks should be convert to PCM or SPDIF."
 msgstr ""
 
 msgid "Choose which tuner to configure."
@@ -2434,6 +2481,15 @@ msgstr ""
 msgid "Configure whether (and for how long) a second infobar will be shown when OK is pressed twice. The second infobar contains additional information about the current channel."
 msgstr ""
 
+msgid "Configure whether AAC sound tracks should be transcoded."
+msgstr ""
+
+msgid "Configure whether DTS-HD channel sound tracks should be downmixed or transcoded."
+msgstr ""
+
+msgid "Configure whether WMA pro channel sound tracks should be downmixed or transcoded."
+msgstr ""
+
 msgid "Configure whether a simple second infobar will be shown instead of the regular one."
 msgstr ""
 
@@ -2527,7 +2583,7 @@ msgstr ""
 msgid "Constellation & FFT mode"
 msgstr "Constellation"
 
-msgid "Consult your Unicable device spec sheet for this information."
+msgid "Consult your SCR device spec sheet for this information."
 msgstr ""
 
 msgid "Consult your motor's spec sheet for this information, or leave the default setting."
@@ -2554,9 +2610,6 @@ msgstr "เนื้อหาเกินความจุแผ่นดีว
 
 msgid "Continue"
 msgstr "ทำต่อ"
-
-msgid "Continue in background"
-msgstr "ทำต่อแบบฉากหลัง"
 
 #, fuzzy
 msgid "Continue playback"
@@ -2614,6 +2667,9 @@ msgid "Could not record due to invalid service %s"
 msgstr "ไม่สามารถบันทึกได้ เนื่องจากเวลาซ้อนกับรายการ %s"
 
 msgid "Country"
+msgstr ""
+
+msgid "Cover dashed flickering line for this service"
 msgstr ""
 
 #, fuzzy
@@ -2768,6 +2824,9 @@ msgid "DMM normal"
 msgstr ""
 
 msgid "DTS"
+msgstr ""
+
+msgid "DTS HD downmix"
 msgstr ""
 
 msgid "DTS downmix"
@@ -2953,6 +3012,12 @@ msgstr "ลบรายการนี้"
 #, fuzzy
 msgid "Delete saved playlist"
 msgstr "ลบรายการสารบัญ"
+
+msgid "Delete the character to the left of text buffer cursor"
+msgstr ""
+
+msgid "Delete the character under the text buffer cursor"
+msgstr ""
 
 msgid "Delete timer"
 msgstr ""
@@ -3390,6 +3455,9 @@ msgstr "กำลังดาวน์โหลด"
 msgid "Downloading plugin information. Please wait..."
 msgstr "กำลังดาวน์โหลดข้อมูล Plugin กรุณารอสักครู่..."
 
+msgid "Downmix"
+msgstr ""
+
 msgid "Dreambox format data DVD (HDTV compatible)"
 msgstr ""
 
@@ -3679,6 +3747,10 @@ msgid "Enigma2 Version: %s"
 msgstr ""
 
 #, fuzzy
+msgid "Enter"
+msgstr "ช่อง"
+
+#, fuzzy
 msgid "Enter IP address"
 msgstr "IP Address"
 
@@ -3705,6 +3777,10 @@ msgstr "กรุณาป้อนรหัสที่ถูกต้องด
 
 msgid "Enter pin code"
 msgstr ""
+
+#, fuzzy
+msgid "Enter text and exit"
+msgstr "บันทึกสารบัญเมื่อออก"
 
 msgid "Enter the frequency at which you LNB switches between low band and high band. For more information consult the spec sheet of your LNB."
 msgstr ""
@@ -4313,15 +4389,15 @@ msgstr ""
 msgid "Full transparency"
 msgstr ""
 
+msgid "Full view resolution"
+msgstr ""
+
 #, python-format
 msgid "Fullback for %s\n"
 msgstr ""
 
 #, python-format
 msgid "Fullbackup on %s"
-msgstr ""
-
-msgid "Full view resolution"
 msgstr ""
 
 msgid "Function of OK button"
@@ -4509,6 +4585,9 @@ msgstr "ภาษากรีก"
 msgid "Greek"
 msgstr "ภาษากรีก"
 
+msgid "Greek (Modern)"
+msgstr ""
+
 #, fuzzy
 msgid "Green"
 msgstr "ภาษากรีก"
@@ -4592,6 +4671,10 @@ msgstr "กำลังบันทึกรายการ"
 msgid "HDMI allow unsupported modes"
 msgstr ""
 
+#, fuzzy
+msgid "HDMI audio source"
+msgstr "ระบบสี"
+
 msgid "HDMI bypass EDID checking"
 msgstr ""
 
@@ -4613,11 +4696,22 @@ msgstr ""
 msgid "HDR10"
 msgstr ""
 
+#, fuzzy
+msgid "HDR10 support"
+msgstr "ไม่รองรับ"
+
+msgid "HELP"
+msgstr ""
+
 msgid "HI-cleanup for external subtitles"
 msgstr ""
 
 msgid "HLG"
 msgstr ""
+
+#, fuzzy
+msgid "HLG support"
+msgstr "ไม่รองรับ"
 
 #, fuzzy
 msgid "Haiti"
@@ -4791,6 +4885,12 @@ msgstr "C"
 msgid "IDLE"
 msgstr ""
 
+msgid "INFO"
+msgstr ""
+
+msgid "INS"
+msgstr ""
+
 #, fuzzy
 msgid "IP address"
 msgstr "IP Address"
@@ -4931,6 +5031,10 @@ msgstr ""
 
 msgid "Include AIT in recordings"
 msgstr ""
+
+#, fuzzy
+msgid "Include CI assignment"
+msgstr "CI assignment"
 
 msgid "Include ECM in http streams"
 msgstr ""
@@ -5176,6 +5280,9 @@ msgstr "Ipkg"
 msgid "Iran (Islamic Republic of)"
 msgstr ""
 
+msgid "Iran, Islamic Republic"
+msgstr ""
+
 msgid "Iraq"
 msgstr ""
 
@@ -5297,6 +5404,10 @@ msgstr "การวางแป้นพิมพ์"
 
 msgid "Keyboard"
 msgstr "แป้นพิมพ์"
+
+#, fuzzy
+msgid "Keyboard data entry"
+msgstr "ตั้งค่าแป้นพิมพ์"
 
 #, fuzzy
 msgid "Keyboard map"
@@ -5535,6 +5646,10 @@ msgstr ""
 msgid "Local network"
 msgstr "Local Network"
 
+#, fuzzy
+msgid "Locale"
+msgstr "สถานที่"
+
 msgid "Location"
 msgstr "สถานที่"
 
@@ -5573,6 +5688,9 @@ msgid "Longitude"
 msgstr "ลองจิจูด"
 
 msgid "Lower Framerate save CPU Time"
+msgstr ""
+
+msgid "Lower case"
 msgstr ""
 
 msgid "Luxembourg"
@@ -5688,9 +5806,6 @@ msgstr "บันทึกก่อนเวลาจริง (นาที)"
 msgid "Mark service as dedicated 3D service"
 msgstr ""
 
-msgid "Mark service to hide VBI line"
-msgstr ""
-
 msgid "Marshall Islands"
 msgstr ""
 
@@ -5774,12 +5889,6 @@ msgstr ""
 msgid "MiniTV - video0"
 msgstr ""
 
-msgid "MiniTV - video0+video1"
-msgstr ""
-
-msgid "MiniTV - video1"
-msgstr ""
-
 msgid "MiniTV framerate"
 msgstr ""
 
@@ -5787,12 +5896,6 @@ msgid "MiniTV on frontpanel"
 msgstr ""
 
 msgid "MiniTV with OSD - video0+fb"
-msgstr ""
-
-msgid "MiniTV with OSD - video0+video1+fb"
-msgstr ""
-
-msgid "MiniTV with OSD - video1+fb"
 msgstr ""
 
 #, python-format
@@ -5945,6 +6048,30 @@ msgstr "ภาพซ้อนภาพ"
 msgid "Move east"
 msgstr "เคลื่อนไปทางทิศตะวันออก"
 
+msgid "Move the text buffer cursor left"
+msgstr ""
+
+msgid "Move the text buffer cursor right"
+msgstr ""
+
+msgid "Move the text buffer cursor to the first character"
+msgstr ""
+
+msgid "Move the text buffer cursor to the last character"
+msgstr ""
+
+msgid "Move the virtual keyboard cursor down"
+msgstr ""
+
+msgid "Move the virtual keyboard cursor left"
+msgstr ""
+
+msgid "Move the virtual keyboard cursor right"
+msgstr ""
+
+msgid "Move the virtual keyboard cursor up"
+msgstr ""
+
 msgid "Move to position X"
 msgstr ""
 
@@ -5966,10 +6093,6 @@ msgstr "ตั้งค่า Tuner"
 
 msgid "Movie location"
 msgstr ""
-
-#, fuzzy
-msgid "Movie manager"
-msgstr "ค้นหาบริการ"
 
 #, fuzzy
 msgid "Movie selection"
@@ -6525,6 +6648,9 @@ msgstr ""
 msgid "Number of repeating text on display."
 msgstr ""
 
+msgid "Number or SMS style data entry"
+msgstr ""
+
 msgid "OK"
 msgstr "ตกลง"
 
@@ -6549,6 +6675,9 @@ msgid "OSD settings"
 msgstr "ตั้งค่า OSD"
 
 msgid "OSD transparency"
+msgstr ""
+
+msgid "OVR"
 msgstr ""
 
 msgid "Off"
@@ -6591,7 +6720,7 @@ msgstr "ไม่เป็นเส้นตรง"
 msgid "Online = Download a image and flash it"
 msgstr ""
 
-msgid "Only change this setting if you are using a Unicable device that has been reprogrammed with a custom programmer. For further information check with the person that reprogrammed the device."
+msgid "Only change this setting if you are using a SCR device that has been reprogrammed with a custom programmer. For further information check with the person that reprogrammed the device."
 msgstr ""
 
 msgid "Only extensions."
@@ -6712,6 +6841,9 @@ msgstr ""
 msgid "PAL"
 msgstr "PAL"
 
+msgid "PCM"
+msgstr ""
+
 msgid "PCR PID"
 msgstr ""
 
@@ -6825,6 +6957,9 @@ msgstr ""
 #, fuzzy
 msgid "Partitions"
 msgstr "ค่าทิศทาง"
+
+msgid "Passthrough"
+msgstr ""
 
 #, fuzzy
 msgid "Pause"
@@ -6957,6 +7092,9 @@ msgid ""
 msgstr ""
 "กรุณาป้อนค่าที่จำเป็น และตรวจสอบความถูกต้องของ Nameserver\n"
 "จากนั้นกดปุ่ม OK เพื่อทำงานต่อ"
+
+msgid "Please configure the fallback tuner setup?"
+msgstr ""
 
 msgid ""
 "Please configure your internet connection by filling out the required values.\n"
@@ -7119,6 +7257,9 @@ msgstr "กรุณาตั้งค่า Tuner B"
 #, fuzzy
 msgid "Please set up tuner K"
 msgstr "กรุณาตั้งค่า Tuner B"
+
+msgid "Please setup the following basic configs!"
+msgstr ""
 
 msgid ""
 "Please use direction keys to move the PiP window.\n"
@@ -8409,6 +8550,9 @@ msgstr ""
 msgid "Select 'A' or 'B' if your aerial system requires this, otherwise select 'none'. If you are unsure select 'none'."
 msgstr ""
 
+msgid "Select 'FBC SCR' if this tuner will connect to a SCR (Unicable/JESS) device. For all other setups select 'FBC automatic'."
+msgstr ""
+
 msgid "Select 'band' if using a 'universal' LNB, otherwise consult your LNB spec sheet."
 msgstr ""
 
@@ -8421,7 +8565,7 @@ msgstr ""
 msgid "Select 'provider' to scan from the predefined list of cable multiplexes. Select 'bands' to only scan certain parts of the spectrum. Select 'steps' to scan in steps of a particular frequency bandwidth."
 msgstr ""
 
-msgid "Select 'yes' if this tuner is connected to the Unicable device through another tuner, otherwise select 'no'."
+msgid "Select 'yes' if this tuner is connected to the SCR device through another tuner, otherwise select 'no'."
 msgstr ""
 
 msgid "Select 'yes' to choose what bands or step sizes will be scanned."
@@ -8577,6 +8721,10 @@ msgid "Select interface"
 msgstr "เลือกอินเตอร์เฟซ"
 
 #, fuzzy
+msgid "Select locale"
+msgstr "เลือกที่ที่จะสำรอง"
+
+#, fuzzy
 msgid "Select location"
 msgstr "เลือกที่ที่จะสำรอง"
 
@@ -8625,21 +8773,30 @@ msgstr "เลือกโฟล์เดอร์ปลายทาง"
 msgid "Select the Swap File Size:"
 msgstr ""
 
-msgid "Select the Unicable channel to be assigned to this tuner. This is a unique value. Be certain that no other device connected to this same Unicable system is allocated to the same Unicable channel."
+msgid "Select the User Band channel to be assigned to this tuner. This is an index into the table of frequencies the SCR switch or SCR LNB uses to pass the requested transponder to the tuner."
 msgstr ""
 
-msgid "Select the format of your Unicable device. Choices are 'SCR Unicable' (Unicable I format), or 'SCR JESS' (Unicable II format)."
+msgid "Select the User Band frequency to be assigned to this tuner. This is the frequency the SCR switch or SCR LNB uses to pass the requested transponder to the tuner."
 msgstr ""
 
-msgid "Select the manufacturer of your Unicable device. If the manufacturer is not listed, set 'SCR' to 'user defined' and enter the device parameters manually according to its spec sheet."
+msgid "Select the User Band to be assigned to this tuner. This is an index into the table of frequencies the SCR switch or SCR LNB uses to pass the requested tranponder to the tuner."
 msgstr ""
 
-msgid "Select the model number of your Unicable device. If the model number is not listed, set 'SCR' to 'user defined' and enter the device parameters manually according to its spec sheet."
+msgid "Select the character or action under the virtual keyboard cursor"
+msgstr ""
+
+msgid "Select the manufacturer of your SCR device. If the manufacturer is not listed, set 'SCR' to 'user defined' and enter the device parameters manually according to its spec sheet."
+msgstr ""
+
+msgid "Select the model number of your SCR device. If the model number is not listed, set 'SCR' to 'user defined' and enter the device parameters manually according to its spec sheet."
 msgstr ""
 
 #, fuzzy
 msgid "Select the movie path"
 msgstr "เลือกพาธของภาพยนต์"
+
+msgid "Select the protocol used by your SCR device. Choices are 'SCR Unicable' (Unicable), or 'SCR JESS' (JESS, also known as Unicable II)."
+msgstr ""
 
 msgid "Select the satellite which is connected to Port-A of your switch. If you are unsure select 'automatic' and the receiver will attempt to determine this for you. If nothing is connected to this port, select 'nothing connected'."
 msgstr ""
@@ -8665,13 +8822,19 @@ msgstr ""
 msgid "Select the tuner that this loopthrough depends on."
 msgstr ""
 
-msgid "Select the tuner to which the signal cable of the Unicable device is connected."
+msgid "Select the tuner to which the signal cable of the SCR device is connected."
 msgstr ""
 
 msgid "Select the type of LNB/device being used (normally 'Universal'). If your LNB type is not available select 'user defined'."
 msgstr ""
 
-msgid "Select the type of Unicable device you are using."
+msgid "Select the type of Single Cable Reception device you are using."
+msgstr ""
+
+msgid "Select the virtual keyboard locale from a menu"
+msgstr ""
+
+msgid "Select the virtual keyboard shifted character set"
 msgstr ""
 
 #, fuzzy
@@ -8839,6 +9002,9 @@ msgstr "ค้นหาบริการ"
 
 msgid "Services"
 msgstr "บริการต่างๆ"
+
+msgid "Set CI assignment for detection of available services."
+msgstr ""
 
 msgid "Set PIN"
 msgstr ""
@@ -9375,13 +9541,13 @@ msgstr ""
 msgid "Skin"
 msgstr "สกิน"
 
+#, python-format
+msgid "Skin & Resolution: %s (%sx%s)"
+msgstr ""
+
 #, fuzzy
 msgid "Skin setup"
 msgstr "ตั้งค่า"
-
-#, fuzzy
-msgid "Skin: "
-msgstr "สกิน"
 
 msgid "Skins"
 msgstr "สกิน"
@@ -9617,6 +9783,12 @@ msgstr ""
 
 msgid "Spanish"
 msgstr "ภาษาสเปน"
+
+msgid "Special 1"
+msgstr ""
+
+msgid "Special 2"
+msgstr ""
 
 msgid "Specify extra timeframe to ignore inactivity sleeptimer"
 msgstr ""
@@ -10366,6 +10538,14 @@ msgstr " มีรายการปรับปรุง"
 msgid "There are currently no outstanding actions."
 msgstr ""
 
+#, fuzzy
+msgid "There are no saved playlists to delete!"
+msgstr "กรุณาเลือกสารบัญรายการที่จะลบ..."
+
+#, fuzzy
+msgid "There are no saved playlists to load!"
+msgstr "ลบรายการสารบัญ"
+
 msgid "There are no updates available."
 msgstr ""
 
@@ -10450,6 +10630,9 @@ msgstr ""
 msgid "This option allows to set the level of dynamic contrast of the picture."
 msgstr ""
 
+msgid "This option allows you can to set the auto volume level."
+msgstr ""
+
 msgid "This option allows you enable smoothing filter to control the dithering process."
 msgstr ""
 
@@ -10486,6 +10669,18 @@ msgstr ""
 msgid "This option allows you to enable 3D surround sound."
 msgstr ""
 
+msgid "This option allows you to enable or disable the 10 bit color mode"
+msgstr ""
+
+msgid "This option allows you to enable or disable the 12 bit color mode"
+msgstr ""
+
+msgid "This option allows you to force the HDR10 modes for UHD"
+msgstr ""
+
+msgid "This option allows you to force the HLG modes for UHD"
+msgstr ""
+
 msgid "This option allows you to hide and sort menu entries. When selecting user you can change order and hide menu items via the blue button"
 msgstr ""
 
@@ -10505,9 +10700,6 @@ msgid "This option allows you to view the old and new settings side by side."
 msgstr ""
 
 msgid "This option can be useful for long HDMI cables."
-msgstr ""
-
-msgid "This option configures you can set auto volume level."
 msgstr ""
 
 msgid "This option set the level of surpression of mosquito noise (Mosquito Noise is random aliasing as a result of strong compression). Obviously this goes at the cost of picture details."
@@ -10763,6 +10955,9 @@ msgstr ""
 msgid "Toggle infoBar"
 msgstr ""
 
+msgid "Toggle new text inserts before or overwrites existing text"
+msgstr ""
+
 msgid "Togo"
 msgstr ""
 
@@ -11004,6 +11199,9 @@ msgstr ""
 msgid "Unattended upgrade without GUI and reboot system"
 msgstr ""
 
+msgid "Uncover dashed flickering line for this service"
+msgstr ""
+
 #, fuzzy
 msgid "Undefined"
 msgstr "ผู้ใช้กำหนด"
@@ -11031,6 +11229,15 @@ msgstr "แก้ไขบริการที่ต้องควบคุม
 msgid "Unicable / JESS"
 msgstr "Unicable LNB"
 
+msgid "Unicable delay after change voltage before switch command"
+msgstr ""
+
+msgid "Unicable delay after enable voltage before switch command"
+msgstr ""
+
+msgid "Unicable delay after last diseqc command"
+msgstr ""
+
 msgid "Uninstall"
 msgstr ""
 
@@ -11041,6 +11248,9 @@ msgid "United Arab Emirates"
 msgstr ""
 
 msgid "United Kingdom"
+msgstr ""
+
+msgid "United States"
 msgstr ""
 
 msgid "United States Minor Outlying Islands"
@@ -11056,9 +11266,6 @@ msgid "Unknown"
 msgstr ""
 
 msgid "Unmark service as dedicated 3D service"
-msgstr ""
-
-msgid "Unmark service to unhide VBI line"
 msgstr ""
 
 msgid "Unmount"
@@ -11113,6 +11320,9 @@ msgstr ""
 
 msgid "Upgrading"
 msgstr "กำลังอัพเกรด"
+
+msgid "Upper case"
+msgstr ""
 
 msgid "Uruguay"
 msgstr ""
@@ -11289,6 +11499,9 @@ msgstr ""
 msgid "Vanuatu"
 msgstr "ทำเอง"
 
+msgid "Various"
+msgstr ""
+
 msgid "Venezuela (Bolivarian Republic of)"
 msgstr ""
 
@@ -11432,6 +11645,14 @@ msgid "Virgin Islands (U.S.)"
 msgstr ""
 
 #, fuzzy
+msgid "Virtual KeyBoard Functions"
+msgstr "แป้นพิมพ์จำลอง"
+
+#, fuzzy
+msgid "Virtual KeyBoard Text:"
+msgstr "แป้นพิมพ์จำลอง"
+
+#, fuzzy
 msgid "Virtual keyboard"
 msgstr "แป้นพิมพ์จำลอง"
 
@@ -11459,6 +11680,9 @@ msgid "WEP"
 msgstr "WEP"
 
 msgid "WLAN connection"
+msgstr ""
+
+msgid "WMA pro downmix"
 msgstr ""
 
 #, fuzzy
@@ -11869,6 +12093,10 @@ msgstr ""
 
 msgid "Without popup"
 msgstr ""
+
+#, fuzzy
+msgid "Wizard setup"
+msgstr "ตั้งค่าวีดีโอ"
 
 msgid "Wizard to arrange the overscan"
 msgstr ""
@@ -12575,6 +12803,13 @@ msgid ""
 "\n"
 msgstr ""
 
+msgid "controlled by HDMI"
+msgstr ""
+
+#, fuzzy
+msgid "convert to multi channel PCM"
+msgstr "ช่อง"
+
 msgid "cooking"
 msgstr ""
 
@@ -12794,6 +13029,14 @@ msgstr ""
 msgid "football/soccer"
 msgstr ""
 
+#, fuzzy
+msgid "force disabled"
+msgstr "ไม่ใช้แล้ว"
+
+#, fuzzy
+msgid "force enabled"
+msgstr "ใช้งานแล้ว"
+
 msgid "foreign countries/expeditions"
 msgstr ""
 
@@ -12839,9 +13082,6 @@ msgstr ""
 
 msgid "help..."
 msgstr "ช่วยเหลือ..."
-
-msgid "hide"
-msgstr ""
 
 msgid "horizontal"
 msgstr "แนวนอน (H)"
@@ -13350,9 +13590,6 @@ msgstr ""
 msgid "settings"
 msgstr "การตั้งค่า"
 
-msgid "show"
-msgstr ""
-
 msgid "show DVD main menu"
 msgstr "แสดงเมนูหลักของดีวีดี"
 
@@ -13527,6 +13764,10 @@ msgstr ""
 msgid "unknown"
 msgstr "ไม่มีข้อมูล"
 
+#, fuzzy
+msgid "unknown error"
+msgstr "ไม่ทราบชนิดบริการ"
+
 msgid "unknown service"
 msgstr "ไม่ทราบชนิดบริการ"
 
@@ -13538,6 +13779,9 @@ msgid "untestable"
 msgstr "เปิดใช้"
 
 msgid "until standby/restart"
+msgstr ""
+
+msgid "use best, controlled by HDMI"
 msgstr ""
 
 msgid "user defined"

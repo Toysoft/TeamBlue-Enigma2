@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: enigma2 teamBlue\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-05-28 14:28+0200\n"
+"POT-Creation-Date: 2018-11-30 19:40+0100\n"
 "PO-Revision-Date: 2015-01-29 17:40+0200\n"
 "Last-Translator: arn354 <arn354@email.de>\n"
 "Language-Team: none\n"
@@ -86,6 +86,13 @@ msgid ""
 msgstr ""
 "\n"
 "Za nadaljevanje pritisnite OK."
+
+#
+#, fuzzy
+msgid ""
+"\n"
+"Press OK or Exit to abort!"
+msgstr "Za začetek iskanja pritisnite OK"
 
 #, fuzzy
 msgid ""
@@ -919,12 +926,27 @@ msgstr ""
 msgid "AAC downmix"
 msgstr "Pretvorba AC3/DTS zvoka v stereo"
 
+#
+#, fuzzy
+msgid "AAC plus downmix"
+msgstr "Pretvorba AC3/DTS zvoka v stereo"
+
+#
+#, fuzzy
+msgid "AAC transcoding"
+msgstr "Prevod:"
+
 msgid "AC3"
 msgstr ""
 
 #
 #, fuzzy
 msgid "AC3 downmix"
+msgstr "Pretvorba AC3/DTS zvoka v stereo"
+
+#
+#, fuzzy
+msgid "AC3 plus downmix"
 msgstr "Pretvorba AC3/DTS zvoka v stereo"
 
 msgid "ACQUIRING TSID/ONID"
@@ -1190,6 +1212,11 @@ msgstr "Vsi sateliti 3 (USALS)"
 msgid "All satellites 4 (USALS)"
 msgstr "Vsi sateliti 4 (USALS)"
 
+#
+#, fuzzy
+msgid "All services provider"
+msgstr "Dodeljeni kanali/ponudniki:"
+
 msgid "Allocate"
 msgstr ""
 
@@ -1197,6 +1224,12 @@ msgid "Allocate a number to the physical LNB you are configuring. You will be ab
 msgstr ""
 
 msgid "Allocate unused memory index"
+msgstr ""
+
+msgid "Allow 10bit"
+msgstr ""
+
+msgid "Allow 12bit"
 msgstr ""
 
 #, fuzzy
@@ -1532,6 +1565,11 @@ msgstr "Spreminjanje nastavitev"
 msgid "Australia"
 msgstr "Italjansko"
 
+#
+#, fuzzy
+msgid "Australian"
+msgstr "Italjansko"
+
 msgid "Austria"
 msgstr ""
 
@@ -1615,6 +1653,11 @@ msgstr "se bo zagnalo"
 
 #
 msgid "Available format variables"
+msgstr "Razpoložljive oblike"
+
+#
+#, fuzzy
+msgid "Available locales are:"
 msgstr "Razpoložljive oblike"
 
 msgid "Azerbaijan"
@@ -1764,6 +1807,11 @@ msgstr "Odziv ob koncu filma"
 msgid "Belarus"
 msgstr ""
 
+#
+#, fuzzy
+msgid "Belgian"
+msgstr "Norveško"
+
 msgid "Belgium"
 msgstr ""
 
@@ -1806,6 +1854,9 @@ msgid "Blue"
 msgstr ""
 
 msgid "Bolivia (Plurinational State of)"
+msgstr ""
+
+msgid "Bolt"
 msgstr ""
 
 msgid "Bonaire, Sint Eustatius and Saba"
@@ -2005,6 +2056,9 @@ msgstr ""
 #
 msgid "Cancel"
 msgstr "Izhod"
+
+msgid "Cancel any text changes and exit"
+msgstr ""
 
 msgid "Cancelled upon user request"
 msgstr ""
@@ -2293,6 +2347,10 @@ msgstr "Uporabnik - seznam paketov"
 
 msgid "Choose the location for crash and debuglogs."
 msgstr ""
+
+#, fuzzy
+msgid "Choose whether multi channel sound tracks should be convert to PCM or SPDIF."
+msgstr "Nastavitev omogoča pretvorbo večkanalnega zvoka v stereo zvok. Priporočena nastavitev je \"Da\", sicer se lahko zgodi, da pri nekaterih TV kanalih zvok ne bo deloval."
 
 msgid "Choose which tuner to configure."
 msgstr "Izberite ustrezen kanalnik za nastavljanje."
@@ -2765,6 +2823,18 @@ msgid "Configure whether (and for how long) a second infobar will be shown when 
 msgstr "Določitev prikaza razširjene informacijske vrstice pri drugem pritisku na tipko \"OK\". Prikazane informacije se razlikujejo od uporabljene preobleke. Nekatere preobleke razširjene info. vrstice ne podpirajo!"
 
 #, fuzzy
+msgid "Configure whether AAC sound tracks should be transcoded."
+msgstr "Nastavitev omogoča pretvorbo večkanalnega zvoka v stereo zvok. Priporočena nastavitev je \"Da\", sicer se lahko zgodi, da pri nekaterih TV kanalih zvok ne bo deloval."
+
+#, fuzzy
+msgid "Configure whether DTS-HD channel sound tracks should be downmixed or transcoded."
+msgstr "Nastavitev omogoča pretvorbo večkanalnega zvoka v stereo zvok. Priporočena nastavitev je \"Da\", sicer se lahko zgodi, da pri nekaterih TV kanalih zvok ne bo deloval."
+
+#, fuzzy
+msgid "Configure whether WMA pro channel sound tracks should be downmixed or transcoded."
+msgstr "Nastavitev omogoča pretvorbo večkanalnega zvoka v stereo zvok. Priporočena nastavitev je \"Da\", sicer se lahko zgodi, da pri nekaterih TV kanalih zvok ne bo deloval."
+
+#, fuzzy
 msgid "Configure whether a simple second infobar will be shown instead of the regular one."
 msgstr "Nastavitev omogoča pretvorbo večkanalnega zvoka v stereo zvok. Priporočena nastavitev je \"Da\", sicer se lahko zgodi, da pri nekaterih TV kanalih zvok ne bo deloval."
 
@@ -2871,7 +2941,7 @@ msgstr ""
 msgid "Constellation & FFT mode"
 msgstr "Konstalacija"
 
-msgid "Consult your Unicable device spec sheet for this information."
+msgid "Consult your SCR device spec sheet for this information."
 msgstr ""
 
 msgid "Consult your motor's spec sheet for this information, or leave the default setting."
@@ -2902,10 +2972,6 @@ msgstr "Vsebina se ne prilega na DVD!"
 
 msgid "Continue"
 msgstr "Naprej"
-
-#
-msgid "Continue in background"
-msgstr "Nadaljuj v ozadju"
 
 #
 msgid "Continue playback"
@@ -2972,6 +3038,9 @@ msgstr "Snemanje ni možno zaradi napake kanala %s"
 #, fuzzy
 msgid "Country"
 msgstr "Pripenjanje"
+
+msgid "Cover dashed flickering line for this service"
+msgstr ""
 
 #
 #, fuzzy
@@ -3144,6 +3213,11 @@ msgstr "DMM normalno"
 
 msgid "DTS"
 msgstr ""
+
+#
+#, fuzzy
+msgid "DTS HD downmix"
+msgstr "Pretvorba AC3/DTS zvoka v stereo"
 
 #
 #, fuzzy
@@ -3345,6 +3419,12 @@ msgstr "Izbris vnosov v seznamu predvajanja"
 #
 msgid "Delete saved playlist"
 msgstr "Izbris shranjenega seznama predvajanja"
+
+msgid "Delete the character to the left of text buffer cursor"
+msgstr ""
+
+msgid "Delete the character under the text buffer cursor"
+msgstr ""
 
 #
 msgid "Delete timer"
@@ -3867,6 +3947,11 @@ msgstr "Nalaganje..."
 msgid "Downloading plugin information. Please wait..."
 msgstr "Poteka pridobivanje seznama vtičnikov... Prosim počakajte!"
 
+#
+#, fuzzy
+msgid "Downmix"
+msgstr "Pretvorba AC3/DTS zvoka v stereo"
+
 msgid "Dreambox format data DVD (HDTV compatible)"
 msgstr ""
 
@@ -4205,6 +4290,11 @@ msgstr ""
 msgid "Enigma2 Version: %s"
 msgstr ""
 
+#
+#, fuzzy
+msgid "Enter"
+msgstr "na sredini"
+
 #, fuzzy
 msgid "Enter IP address"
 msgstr "IP naslov"
@@ -4235,6 +4325,11 @@ msgstr "Vnesite PIN kodo"
 #
 msgid "Enter pin code"
 msgstr "Vnesite PIN kodo"
+
+#
+#, fuzzy
+msgid "Enter text and exit"
+msgstr "ob izhodu se naj shrani seznam predvajanja"
 
 msgid "Enter the frequency at which you LNB switches between low band and high band. For more information consult the spec sheet of your LNB."
 msgstr ""
@@ -4930,15 +5025,15 @@ msgstr "Ostanek prejšnje slike"
 msgid "Full transparency"
 msgstr "Popolna prosojnost"
 
+msgid "Full view resolution"
+msgstr ""
+
 #, python-format
 msgid "Fullback for %s\n"
 msgstr ""
 
 #, python-format
 msgid "Fullbackup on %s"
-msgstr ""
-
-msgid "Full view resolution"
 msgstr ""
 
 msgid "Function of OK button"
@@ -5143,6 +5238,9 @@ msgstr "Grško"
 msgid "Greek"
 msgstr "Grško"
 
+msgid "Greek (Modern)"
+msgstr ""
+
 #
 #, fuzzy
 msgid "Green"
@@ -5232,6 +5330,11 @@ msgstr "Snemanje"
 msgid "HDMI allow unsupported modes"
 msgstr ""
 
+#
+#, fuzzy
+msgid "HDMI audio source"
+msgstr "Barvni format"
+
 msgid "HDMI bypass EDID checking"
 msgstr ""
 
@@ -5256,6 +5359,13 @@ msgstr "HDMI-CEC nastavitve"
 msgid "HDR10"
 msgstr ""
 
+#, fuzzy
+msgid "HDR10 support"
+msgstr "ni podprto"
+
+msgid "HELP"
+msgstr ""
+
 #
 #, fuzzy
 msgid "HI-cleanup for external subtitles"
@@ -5263,6 +5373,10 @@ msgstr "Zamik za zunanje podnapise"
 
 msgid "HLG"
 msgstr ""
+
+#, fuzzy
+msgid "HLG support"
+msgstr "ni podprto"
 
 #
 #, fuzzy
@@ -5458,6 +5572,12 @@ msgstr "C"
 msgid "IDLE"
 msgstr ""
 
+msgid "INFO"
+msgstr ""
+
+msgid "INS"
+msgstr ""
+
 msgid "IP address"
 msgstr "IP naslov"
 
@@ -5610,6 +5730,11 @@ msgstr "Prisotnost AIT podatkov v HTTP toku"
 #, fuzzy
 msgid "Include AIT in recordings"
 msgstr "Prisotnost AIT podatkov v HTTP toku"
+
+#
+#, fuzzy
+msgid "Include CI assignment"
+msgstr "CI dodelitev"
 
 #
 msgid "Include ECM in http streams"
@@ -5893,6 +6018,9 @@ msgstr "Ipkg"
 msgid "Iran (Islamic Republic of)"
 msgstr ""
 
+msgid "Iran, Islamic Republic"
+msgstr ""
+
 msgid "Iraq"
 msgstr ""
 
@@ -6019,6 +6147,11 @@ msgstr "Jezik tipkovnice"
 #
 msgid "Keyboard"
 msgstr "Jezik tipkovnice"
+
+#
+#, fuzzy
+msgid "Keyboard data entry"
+msgstr "Nastavitve tipkovnice"
 
 #
 msgid "Keyboard map"
@@ -6287,6 +6420,11 @@ msgid "Local network"
 msgstr "Lokalno omrežje"
 
 #
+#, fuzzy
+msgid "Locale"
+msgstr "Lokacija"
+
+#
 msgid "Location"
 msgstr "Lokacija"
 
@@ -6331,6 +6469,9 @@ msgid "Longitude"
 msgstr "Zemljepisna dolžina [Lon]"
 
 msgid "Lower Framerate save CPU Time"
+msgstr ""
+
+msgid "Lower case"
 msgstr ""
 
 msgid "Luxembourg"
@@ -6460,9 +6601,6 @@ msgstr "Meja pred snemanjem (v minutah)"
 msgid "Mark service as dedicated 3D service"
 msgstr ""
 
-msgid "Mark service to hide VBI line"
-msgstr ""
-
 msgid "Marshall Islands"
 msgstr ""
 
@@ -6559,12 +6697,6 @@ msgstr ""
 msgid "MiniTV - video0"
 msgstr ""
 
-msgid "MiniTV - video0+video1"
-msgstr ""
-
-msgid "MiniTV - video1"
-msgstr ""
-
 msgid "MiniTV framerate"
 msgstr ""
 
@@ -6572,12 +6704,6 @@ msgid "MiniTV on frontpanel"
 msgstr ""
 
 msgid "MiniTV with OSD - video0+fb"
-msgstr ""
-
-msgid "MiniTV with OSD - video0+video1+fb"
-msgstr ""
-
-msgid "MiniTV with OSD - video1+fb"
 msgstr ""
 
 #, python-format
@@ -6749,6 +6875,30 @@ msgstr "Aktivacija Slike v Sliki"
 msgid "Move east"
 msgstr "Premikanje proti vzhodu"
 
+msgid "Move the text buffer cursor left"
+msgstr ""
+
+msgid "Move the text buffer cursor right"
+msgstr ""
+
+msgid "Move the text buffer cursor to the first character"
+msgstr ""
+
+msgid "Move the text buffer cursor to the last character"
+msgstr ""
+
+msgid "Move the virtual keyboard cursor down"
+msgstr ""
+
+msgid "Move the virtual keyboard cursor left"
+msgstr ""
+
+msgid "Move the virtual keyboard cursor right"
+msgstr ""
+
+msgid "Move the virtual keyboard cursor up"
+msgstr ""
+
 msgid "Move to position X"
 msgstr "Premik na položaj X"
 
@@ -6771,10 +6921,6 @@ msgstr "Nastavitve seznama posnetkov"
 #
 msgid "Movie location"
 msgstr "Movie lokacija"
-
-#, fuzzy
-msgid "Movie manager"
-msgstr "Ime naprave:"
 
 msgid "Movie selection"
 msgstr "Izbirnik posnetkov"
@@ -7407,6 +7553,9 @@ msgstr "Številčenje posameznih kanalov - v seznamu kanalov"
 msgid "Number of repeating text on display."
 msgstr ""
 
+msgid "Number or SMS style data entry"
+msgstr ""
+
 #
 msgid "OK"
 msgstr "Potrditev"
@@ -7436,6 +7585,9 @@ msgstr "Nastavitve OSD"
 #
 msgid "OSD transparency"
 msgstr "OSD prosojnost"
+
+msgid "OVR"
+msgstr ""
 
 #
 msgid "Off"
@@ -7483,7 +7635,7 @@ msgstr "Nelinearno"
 msgid "Online = Download a image and flash it"
 msgstr ""
 
-msgid "Only change this setting if you are using a Unicable device that has been reprogrammed with a custom programmer. For further information check with the person that reprogrammed the device."
+msgid "Only change this setting if you are using a SCR device that has been reprogrammed with a custom programmer. For further information check with the person that reprogrammed the device."
 msgstr ""
 
 #
@@ -7619,6 +7771,9 @@ msgstr "Prepis nastavitvenih datotek pri nadgradnji programske opreme?"
 msgid "PAL"
 msgstr "PAL"
 
+msgid "PCM"
+msgstr ""
+
 msgid "PCR PID"
 msgstr "PCR PID"
 
@@ -7743,6 +7898,9 @@ msgstr "Pregledovanje..."
 #, fuzzy
 msgid "Partitions"
 msgstr "Polarizacija"
+
+msgid "Passthrough"
+msgstr ""
 
 #
 msgid "Pause"
@@ -7888,6 +8046,9 @@ msgid ""
 msgstr ""
 "Preverite vaše imenske strežnike.\n"
 "Ko boste pripravljeni, pritisnite tipko OK."
+
+msgid "Please configure the fallback tuner setup?"
+msgstr ""
 
 #
 msgid ""
@@ -8087,6 +8248,9 @@ msgstr "Nastavite kanalnik B"
 #, fuzzy
 msgid "Please set up tuner K"
 msgstr "Nastavite kanalnik B"
+
+msgid "Please setup the following basic configs!"
+msgstr ""
 
 #
 msgid ""
@@ -9632,6 +9796,9 @@ msgstr ""
 msgid "Select 'A' or 'B' if your aerial system requires this, otherwise select 'none'. If you are unsure select 'none'."
 msgstr ""
 
+msgid "Select 'FBC SCR' if this tuner will connect to a SCR (Unicable/JESS) device. For all other setups select 'FBC automatic'."
+msgstr ""
+
 msgid "Select 'band' if using a 'universal' LNB, otherwise consult your LNB spec sheet."
 msgstr ""
 
@@ -9644,7 +9811,7 @@ msgstr ""
 msgid "Select 'provider' to scan from the predefined list of cable multiplexes. Select 'bands' to only scan certain parts of the spectrum. Select 'steps' to scan in steps of a particular frequency bandwidth."
 msgstr ""
 
-msgid "Select 'yes' if this tuner is connected to the Unicable device through another tuner, otherwise select 'no'."
+msgid "Select 'yes' if this tuner is connected to the SCR device through another tuner, otherwise select 'no'."
 msgstr ""
 
 msgid "Select 'yes' to choose what bands or step sizes will be scanned."
@@ -9825,6 +9992,11 @@ msgstr "Izberite vmesnik"
 
 #
 #, fuzzy
+msgid "Select locale"
+msgstr "Izberi dogodek"
+
+#
+#, fuzzy
 msgid "Select location"
 msgstr "Izberi dogodek"
 
@@ -9882,21 +10054,30 @@ msgstr "Izberite ciljno mapo"
 msgid "Select the Swap File Size:"
 msgstr ""
 
-msgid "Select the Unicable channel to be assigned to this tuner. This is a unique value. Be certain that no other device connected to this same Unicable system is allocated to the same Unicable channel."
+msgid "Select the User Band channel to be assigned to this tuner. This is an index into the table of frequencies the SCR switch or SCR LNB uses to pass the requested transponder to the tuner."
 msgstr ""
 
-msgid "Select the format of your Unicable device. Choices are 'SCR Unicable' (Unicable I format), or 'SCR JESS' (Unicable II format)."
+msgid "Select the User Band frequency to be assigned to this tuner. This is the frequency the SCR switch or SCR LNB uses to pass the requested transponder to the tuner."
 msgstr ""
 
-msgid "Select the manufacturer of your Unicable device. If the manufacturer is not listed, set 'SCR' to 'user defined' and enter the device parameters manually according to its spec sheet."
+msgid "Select the User Band to be assigned to this tuner. This is an index into the table of frequencies the SCR switch or SCR LNB uses to pass the requested tranponder to the tuner."
 msgstr ""
 
-msgid "Select the model number of your Unicable device. If the model number is not listed, set 'SCR' to 'user defined' and enter the device parameters manually according to its spec sheet."
+msgid "Select the character or action under the virtual keyboard cursor"
+msgstr ""
+
+msgid "Select the manufacturer of your SCR device. If the manufacturer is not listed, set 'SCR' to 'user defined' and enter the device parameters manually according to its spec sheet."
+msgstr ""
+
+msgid "Select the model number of your SCR device. If the model number is not listed, set 'SCR' to 'user defined' and enter the device parameters manually according to its spec sheet."
 msgstr ""
 
 #
 msgid "Select the movie path"
 msgstr "Izberite pot do posnetka"
+
+msgid "Select the protocol used by your SCR device. Choices are 'SCR Unicable' (Unicable), or 'SCR JESS' (JESS, also known as Unicable II)."
+msgstr ""
 
 msgid "Select the satellite which is connected to Port-A of your switch. If you are unsure select 'automatic' and the receiver will attempt to determine this for you. If nothing is connected to this port, select 'nothing connected'."
 msgstr ""
@@ -9922,13 +10103,19 @@ msgstr ""
 msgid "Select the tuner that this loopthrough depends on."
 msgstr ""
 
-msgid "Select the tuner to which the signal cable of the Unicable device is connected."
+msgid "Select the tuner to which the signal cable of the SCR device is connected."
 msgstr ""
 
 msgid "Select the type of LNB/device being used (normally 'Universal'). If your LNB type is not available select 'user defined'."
 msgstr ""
 
-msgid "Select the type of Unicable device you are using."
+msgid "Select the type of Single Cable Reception device you are using."
+msgstr ""
+
+msgid "Select the virtual keyboard locale from a menu"
+msgstr ""
+
+msgid "Select the virtual keyboard shifted character set"
 msgstr ""
 
 #
@@ -10124,6 +10311,9 @@ msgstr "Ime kanala"
 #
 msgid "Services"
 msgstr "Kanali"
+
+msgid "Set CI assignment for detection of available services."
+msgstr ""
 
 #, fuzzy
 msgid "Set PIN"
@@ -10748,15 +10938,14 @@ msgstr "Zemljepisna dolžina"
 msgid "Skin"
 msgstr "Izbor predloge"
 
+#, python-format
+msgid "Skin & Resolution: %s (%sx%s)"
+msgstr ""
+
 #
 #, fuzzy
 msgid "Skin setup"
 msgstr "Nastavitve"
-
-#
-#, fuzzy
-msgid "Skin: "
-msgstr "Izbor predloge"
 
 #
 msgid "Skins"
@@ -11014,6 +11203,14 @@ msgstr ""
 #
 msgid "Spanish"
 msgstr "Špansko"
+
+#, fuzzy
+msgid "Special 1"
+msgstr "posebni dogodki"
+
+#, fuzzy
+msgid "Special 2"
+msgstr "posebni dogodki"
 
 #, fuzzy
 msgid "Specify extra timeframe to ignore inactivity sleeptimer"
@@ -11880,6 +12077,16 @@ msgid "There are currently no outstanding actions."
 msgstr ""
 
 #
+#, fuzzy
+msgid "There are no saved playlists to delete!"
+msgstr "Prosim, da izberete seznam za brisanje."
+
+#
+#, fuzzy
+msgid "There are no saved playlists to load!"
+msgstr "Izbris shranjenega seznama predvajanja"
+
+#
 msgid "There are no updates available."
 msgstr "Nadgradnja ni na voljo."
 
@@ -11967,6 +12174,9 @@ msgstr ""
 msgid "This option allows to set the level of dynamic contrast of the picture."
 msgstr ""
 
+msgid "This option allows you can to set the auto volume level."
+msgstr ""
+
 msgid "This option allows you enable smoothing filter to control the dithering process."
 msgstr ""
 
@@ -12003,6 +12213,18 @@ msgstr ""
 msgid "This option allows you to enable 3D surround sound."
 msgstr ""
 
+msgid "This option allows you to enable or disable the 10 bit color mode"
+msgstr ""
+
+msgid "This option allows you to enable or disable the 12 bit color mode"
+msgstr ""
+
+msgid "This option allows you to force the HDR10 modes for UHD"
+msgstr ""
+
+msgid "This option allows you to force the HLG modes for UHD"
+msgstr ""
+
 msgid "This option allows you to hide and sort menu entries. When selecting user you can change order and hide menu items via the blue button"
 msgstr ""
 
@@ -12022,9 +12244,6 @@ msgid "This option allows you to view the old and new settings side by side."
 msgstr ""
 
 msgid "This option can be useful for long HDMI cables."
-msgstr ""
-
-msgid "This option configures you can set auto volume level."
 msgstr ""
 
 msgid "This option set the level of surpression of mosquito noise (Mosquito Noise is random aliasing as a result of strong compression). Obviously this goes at the cost of picture details."
@@ -12310,6 +12529,9 @@ msgstr ""
 msgid "Toggle infoBar"
 msgstr ""
 
+msgid "Toggle new text inserts before or overwrites existing text"
+msgstr ""
+
 msgid "Togo"
 msgstr ""
 
@@ -12592,6 +12814,9 @@ msgstr ""
 msgid "Unattended upgrade without GUI and reboot system"
 msgstr ""
 
+msgid "Uncover dashed flickering line for this service"
+msgstr ""
+
 #, fuzzy
 msgid "Undefined"
 msgstr "nedoločeno"
@@ -12624,6 +12849,15 @@ msgstr "Urejanje storitve starševske zaščite"
 msgid "Unicable / JESS"
 msgstr "Unicable "
 
+msgid "Unicable delay after change voltage before switch command"
+msgstr ""
+
+msgid "Unicable delay after enable voltage before switch command"
+msgstr ""
+
+msgid "Unicable delay after last diseqc command"
+msgstr ""
+
 #
 msgid "Uninstall"
 msgstr "Odstranitev"
@@ -12635,6 +12869,9 @@ msgid "United Arab Emirates"
 msgstr ""
 
 msgid "United Kingdom"
+msgstr ""
+
+msgid "United States"
 msgstr ""
 
 msgid "United States Minor Outlying Islands"
@@ -12651,9 +12888,6 @@ msgid "Unknown"
 msgstr "Neznano"
 
 msgid "Unmark service as dedicated 3D service"
-msgstr ""
-
-msgid "Unmark service to unhide VBI line"
 msgstr ""
 
 msgid "Unmount"
@@ -12718,6 +12952,9 @@ msgstr ""
 #
 msgid "Upgrading"
 msgstr "Nadgrajujem"
+
+msgid "Upper case"
+msgstr ""
 
 msgid "Uruguay"
 msgstr ""
@@ -12909,6 +13146,10 @@ msgstr ""
 msgid "Vanuatu"
 msgstr "Ročno"
 
+#, fuzzy
+msgid "Various"
+msgstr "Predvajaj prejšnje"
+
 msgid "Venezuela (Bolivarian Republic of)"
 msgstr ""
 
@@ -13078,6 +13319,16 @@ msgid "Virgin Islands (U.S.)"
 msgstr ""
 
 #
+#, fuzzy
+msgid "Virtual KeyBoard Functions"
+msgstr "Navidezna tipkovnica"
+
+#
+#, fuzzy
+msgid "Virtual KeyBoard Text:"
+msgstr "Navidezna tipkovnica"
+
+#
 msgid "Virtual keyboard"
 msgstr "Navidezna tipkovnica"
 
@@ -13112,6 +13363,11 @@ msgstr "WEP"
 
 msgid "WLAN connection"
 msgstr "Brezžična omrežna povezava"
+
+#
+#, fuzzy
+msgid "WMA pro downmix"
+msgstr "Pretvorba AC3/DTS zvoka v stereo"
 
 #
 #, fuzzy
@@ -13563,6 +13819,11 @@ msgstr ""
 
 msgid "Without popup"
 msgstr "Brez obvestila"
+
+#
+#, fuzzy
+msgid "Wizard setup"
+msgstr "Video nastavitve"
 
 msgid "Wizard to arrange the overscan"
 msgstr ""
@@ -14387,6 +14648,13 @@ msgid ""
 "\n"
 msgstr ""
 
+msgid "controlled by HDMI"
+msgstr ""
+
+#, fuzzy
+msgid "convert to multi channel PCM"
+msgstr "Uporaba razširjenega (multi) EPG sistema"
+
 msgid "cooking"
 msgstr ""
 
@@ -14636,6 +14904,16 @@ msgstr ""
 msgid "football/soccer"
 msgstr ""
 
+#
+#, fuzzy
+msgid "force disabled"
+msgstr "onemogočeno"
+
+#
+#, fuzzy
+msgid "force enabled"
+msgstr "vključeno"
+
 msgid "foreign countries/expeditions"
 msgstr ""
 
@@ -14689,9 +14967,6 @@ msgstr "višina"
 #
 msgid "help..."
 msgstr "Pomoč"
-
-msgid "hide"
-msgstr ""
 
 #
 msgid "horizontal"
@@ -15293,9 +15568,6 @@ msgstr "Izbira zagonskega kanala"
 msgid "settings"
 msgstr "Nastavitve"
 
-msgid "show"
-msgstr ""
-
 #
 msgid "show DVD main menu"
 msgstr "Prikaz glavnega DVD menija"
@@ -15502,6 +15774,11 @@ msgid "unknown"
 msgstr "neznano"
 
 #
+#, fuzzy
+msgid "unknown error"
+msgstr "neznan kanal"
+
+#
 msgid "unknown service"
 msgstr "neznan kanal"
 
@@ -15516,6 +15793,9 @@ msgstr "omogoči"
 #
 msgid "until standby/restart"
 msgstr "do stanja pripravljenosti/resetiranja"
+
+msgid "use best, controlled by HDMI"
+msgstr ""
 
 #
 msgid "user defined"

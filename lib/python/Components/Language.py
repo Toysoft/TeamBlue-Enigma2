@@ -30,11 +30,9 @@ class Language:
 		self.addLanguage("Česky",       "cs", "CZ", "ISO-8859-15")
 		self.addLanguage("Dansk",       "da", "DK", "ISO-8859-15")
 		self.addLanguage("Ελληνικά",    "el", "GR", "ISO-8859-7")
-		self.addLanguage("SChinese", 	"zh", "CN", "UTF-8")
-		self.addLanguage("TChinese", 	"hk", "HK", "UTF-8")
 		self.addLanguage("Español",     "es", "ES", "ISO-8859-15")
 		self.addLanguage("Eesti",       "et", "EE", "ISO-8859-15")
-		self.addLanguage("Persian",     "fa", "IR", "ISO-8859-15")
+		self.addLanguage("فارسی",	"fa", "IR", "UTF-8")
 		self.addLanguage("Suomi",       "fi", "FI", "ISO-8859-15")
 		self.addLanguage("Français",    "fr", "FR", "ISO-8859-15")
 		self.addLanguage("Frysk",       "fy", "NL", "ISO-8859-15")
@@ -43,6 +41,7 @@ class Language:
 		self.addLanguage("Magyar",      "hu", "HU", "ISO-8859-15")
 		self.addLanguage("Íslenska",    "is", "IS", "ISO-8859-15")
 		self.addLanguage("Italiano",    "it", "IT", "ISO-8859-15")
+		self.addLanguage("Indonesian",	"id", "ID", "ISO-8859-15")
 		self.addLanguage("Kurdish",     "ku", "KU", "ISO-8859-15")
 		self.addLanguage("Lietuvių",    "lt", "LT", "ISO-8859-15")
 		self.addLanguage("Latviešu",    "lv", "LV", "ISO-8859-15")
@@ -58,7 +57,9 @@ class Language:
 		self.addLanguage("Srpski",      "sr", "YU", "ISO-8859-15")
 		self.addLanguage("Svenska",     "sv", "SE", "ISO-8859-15")
 		self.addLanguage("ภาษาไทย",     "th", "TH", "ISO-8859-15")
-		self.addLanguage("Ukrainian",   "uk", "UA", "ISO-8859-15")
+		self.addLanguage("Українська",  "uk", "UA", "ISO-8859-15")
+		self.addLanguage("SChinese",    "zh", "CN", "UTF-8")
+		self.addLanguage("TChinese",    "zh", "HK", "UTF-8")
 
 	def addLanguage(self, name, lang, country, encoding):
 		try:
