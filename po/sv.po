@@ -91,7 +91,7 @@ msgstr ""
 #, fuzzy
 msgid ""
 "\n"
-"Press OK or Exit to abort!"
+"Press OK or Exit to close!"
 msgstr "Tryck OK för sökning"
 
 #, fuzzy

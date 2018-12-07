@@ -80,7 +80,7 @@ class Console(Screen):
 			if not self.errorOcurred and self.closeOnSuccess:
 				self.cancel()
 			else:
-				self["text"].appendText(_("\nPress OK or Exit to abort!"))
+				self["text"].appendText(_("\nPress OK or Exit to close!"))
 				self["key_red"].setText(_("Exit"))
 
 	def cancel(self):

@@ -86,10 +86,10 @@ msgstr ""
 
 msgid ""
 "\n"
-"Press OK or Exit to abort!"
+"Press OK or Exit to close!"
 msgstr ""
 "\n"
-"Drücke OK oder Exit um abzubrechen!"
+"Drücke OK oder Exit zum beenden!"
 
 msgid ""
 "\n"

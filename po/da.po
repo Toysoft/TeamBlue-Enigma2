@@ -84,7 +84,7 @@ msgstr ""
 #, fuzzy
 msgid ""
 "\n"
-"Press OK or Exit to abort!"
+"Press OK or Exit to close!"
 msgstr "Tryk OK for at søge"
 
 #, fuzzy

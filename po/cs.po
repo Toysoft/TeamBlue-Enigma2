@@ -93,7 +93,7 @@ msgstr ""
 #, fuzzy
 msgid ""
 "\n"
-"Press OK or Exit to abort!"
+"Press OK or Exit to close!"
 msgstr "Stiskněte OK pro prohledávání"
 
 msgid ""

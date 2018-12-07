@@ -74,7 +74,7 @@ msgstr ""
 #, fuzzy
 msgid ""
 "\n"
-"Press OK or Exit to abort!"
+"Press OK or Exit to close!"
 msgstr "按OK鍵開始掃描."
 
 #, fuzzy
