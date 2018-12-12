@@ -44,9 +44,9 @@ def ServiceInfoListEntry(a, b="", valueType=TYPE_TEXT, param=4):
 			b = ("%d.%d%s") % (b // 10, b % 10, direction)
 		else:
 			b = str(b)
-	x, y, w, h = skin.parameters.get("ServiceInfo",(0, 0, 1200, 30))
+	x, y, w, h = skin.parameters.get("ServiceInfo",(0, 0, 300, 30))
 	xa, ya, wa, ha = skin.parameters.get("ServiceInfoLeft",(0, 0, 300, 25))
-	xb, yb, wb, hb = skin.parameters.get("ServiceInfoRight",(300, 0, 900, 25))
+	xb, yb, wb, hb = skin.parameters.get("ServiceInfoRight",(300, 0, 600, 25))
 	if b:
 		return [
 			#PyObject *type, *px, *py, *pwidth, *pheight, *pfnt, *pstring, *pflags;
@@ -121,6 +121,7 @@ class ServiceInfo(Screen):
 				self["key_blue"] = self["blue"] = Label(_("Tuner setting values"))
 			else:
 				self.skinName="ServiceInfoSimple"
+
 		self.onShown.append(self.ShowServiceInformation)
 
 	def ShowServiceInformation(self):
@@ -156,6 +157,7 @@ class ServiceInfo(Screen):
 				if gamma:
 					resolution += " - " + gamma
 			if "%3a//" in refstr and reftype not in (1,257,4098,4114):
+			#IPTV 4097 5001, no PIDs shown
 				fillList = [(_("Service name"), name, TYPE_TEXT),
 					(_("Videocodec, size & format"), resolution, TYPE_TEXT),
 					(_("Service reference"), ":".join(refstr.split(":")[:9]), TYPE_TEXT),
@@ -163,30 +165,22 @@ class ServiceInfo(Screen):
 				subList = self.getSubtitleList()
 			else:
 				if ":/" in refstr:
-					pfad = refstr.split(":")[10]
-					pfad = pfad.split('/')
-					title = str(refstr.split(":")[10])
-					filename = str(pfad[len(pfad)-1])
-					location = refstr.split(":")[10].replace(filename,'')
-					fillList = []
-					if name != filename:
-						fillList = fillList + [(_("Title"), name, TYPE_TEXT)]
-					fillList = fillList + [
-					(_("Filename"), filename, TYPE_TEXT),
-					(_("Location"), location , TYPE_TEXT),
-					(_("Videocodec, size & format"), resolution, TYPE_TEXT),
-					(_("Service reference"), ":".join(refstr.split(":")[:9]), TYPE_TEXT)
-					]
-					#self["Title"].text = filename
+				# mp4 videos, dvb-s-t recording
+					fillList = [(_("Service name"), name, TYPE_TEXT),
+						(_("Videocodec, size & format"), resolution, TYPE_TEXT),
+						(_("Service reference"), ":".join(refstr.split(":")[:9]), TYPE_TEXT),
+						(_("Filename"), refstr.split(":")[10], TYPE_TEXT)]
 				else:
-					fillList = [
-						(_("Service name"), name, TYPE_TEXT),
+				# fallback, movistartv, live dvb-s-t
+					fillList = [(_("Service name"), name, TYPE_TEXT),
 						(_("Provider"), self.getServiceInfoValue(iServiceInformation.sProvider), TYPE_TEXT),
 						(_("Videocodec, size & format"), resolution, TYPE_TEXT)]
 					if "%3a//" in refstr:
+					#fallback, movistartv
 						fillList = fillList + [(_("Service reference"), ":".join(refstr.split(":")[:9]), TYPE_TEXT),
 							(_("URL"), refstr.split(":")[10].replace("%3a", ":"), TYPE_TEXT)]
 					else:
+					#live dvb-s-t
 						fillList = fillList + [(_("Service reference"), refstr, TYPE_TEXT)]
 				self.subList = self.getSubtitleList()
 				trackList = self.getTrackList()
@@ -293,13 +287,14 @@ class ServiceInfo(Screen):
 			else:
 				tuner = (_("NIM & Type"), chr(ord('A') + frontendData["tuner_number"]) + " - " + frontendData["tuner_type"], TYPE_TEXT)
 			if frontendDataOrg["tuner_type"] == "DVB-S":
+				issy = lambda x: 0 if x == -1 else x
 				return (tuner,
 					(_("System & Modulation"), frontendData["system"] + " " + frontendData["modulation"], TYPE_TEXT),
 					(_("Orbital position"), frontendData["orbital_position"], TYPE_VALUE_DEC),
 					(_("Frequency & Polarization"), "%s MHz" % (frontendData.get("frequency", 0) / 1000) + " - " + frontendData["polarization"], TYPE_TEXT),
 					(_("Symbol rate & FEC"), "%s KSymb/s" % (frontendData.get("symbol_rate", 0) / 1000) + " - " + frontendData["fec_inner"], TYPE_TEXT),
 					(_("Inversion, Pilot & Roll-off"), frontendData["inversion"] + " - " + str(frontendData.get("pilot", None)) + " - " + str(frontendData.get("rolloff", None)), TYPE_TEXT),
-					(_("Input Stream ID"), frontendData.get("is_id", 0), TYPE_VALUE_DEC),
+					(_("Input Stream ID"), issy(frontendData.get("is_id", 0)), TYPE_VALUE_DEC),
 					(_("PLS Mode"), frontendData.get("pls_mode", None), TYPE_TEXT),
 					(_("PLS Code"), frontendData.get("pls_code", 0), TYPE_VALUE_DEC))
 			elif frontendDataOrg["tuner_type"] == "DVB-C":
