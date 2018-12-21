@@ -5,7 +5,7 @@ from Tools.BoundFunction import boundFunction
 
 from config import config, ConfigSubsection, ConfigSelection, ConfigFloat, ConfigSatlist, ConfigYesNo, ConfigInteger, ConfigSubList, ConfigNothing, ConfigSubDict, ConfigOnOff, ConfigDateTime, ConfigText
 
-from enigma import eDVBFrontendParametersSatellite, eDVBSatelliteEquipmentControl as secClass, eDVBSatelliteDiseqcParameters as diseqcParam, eDVBSatelliteSwitchParameters as switchParam, eDVBSatelliteRotorParameters as rotorParam, eDVBResourceManager, eDVBDB, eEnv
+from enigma import eDVBSatelliteEquipmentControl as secClass, eDVBSatelliteDiseqcParameters as diseqcParam, eDVBSatelliteSwitchParameters as switchParam, eDVBSatelliteRotorParameters as rotorParam, eDVBResourceManager, eDVBDB, eEnv
 
 from time import localtime, mktime
 from datetime import datetime
@@ -114,7 +114,7 @@ class SecConfigure:
 
 	def getRoot(self, slotid, connto):
 		visited = []
-		while self.NimManager.getNimConfig(connto).configMode.value in ("satposdepends", "equal", "loopthrough"):
+		while self.NimManager.getNimConfig(connto).configMode.value in ("satposdepends", "equal", "loopthrough_internal", "loopthrough_external"):
 			connto = int(self.NimManager.getNimConfig(connto).connectedTo.value)
 			if connto in visited: # prevent endless loop
 				return slotid
@@ -154,7 +154,7 @@ class SecConfigure:
 					if connto not in self.equal:
 						self.equal[connto] = []
 					self.equal[connto].append(x)
-				elif nim.configMode.value == "loopthrough":
+				elif nim.configMode.value == "loopthrough_internal" or nim.configMode.value == "loopthrough_external":
 					self.linkNIMs(sec, x, int(nim.connectedTo.value))
 					connto = self.getRoot(x, int(nim.connectedTo.value))
 					if connto not in self.linked:
@@ -173,7 +173,7 @@ class SecConfigure:
 			hw = HardwareInfo()
 			if slot.isCompatible("DVB-S"):
 				print "[SecConfigure] slot: " + str(x) + " configmode: " + str(nim.configMode.value)
-				if nim.configMode.value in ( "loopthrough", "satposdepends", "nothing" ):
+				if nim.configMode.value in ( "loopthrough_internal", "loopthrough_external", "satposdepends", "nothing" ):
 					pass
 				else:
 					sec.setSlotNotLinked(x)
@@ -586,7 +586,7 @@ class NIM(object):
 		return (self.frontend_id is not None) or self.__is_empty
 
 	def isMultistream(self):
-		multistream = self.frontend_id is not None and eDVBResourceManager.getInstance().frontendIsMultistream(self.frontend_id) or False
+		multistream = self.frontend_id and eDVBResourceManager.getInstance().frontendIsMultistream(self.frontend_id) or False
 		# HACK due to poor support for VTUNER_SET_FE_INFO
 		# When vtuner does not accept fe_info we have to fallback to detection using tuner name
 		# More tuner names will be added when confirmed as multistream (FE_CAN_MULTISTREAM)
@@ -643,15 +643,9 @@ class NimManager:
 	def getConfiguredSats(self):
 		return self.sec.getConfiguredSats()
 
-	def getTransponders(self, pos, feid = None):
+	def getTransponders(self, pos):
 		if pos in self.transponders:
-			if feid is None or self.nim_slots[feid].isMultistream():
-				return self.transponders[pos]
-			else: # remove multistream transponders
-				def isMultistreamTP(tp):
-					# since we are using Gold sequences there is no need to check the PLS Mode
-					return tp[5] == eDVBFrontendParametersSatellite.System_DVB_S2 and (tp[10] > -1 or tp[12] > 0)
-				return [tp for tp in self.transponders[pos] if not isMultistreamTP(tp)]
+			return self.transponders[pos]
 		else:
 			return []
 
@@ -906,22 +900,45 @@ class NimManager:
 	def nimRemoveInternalLink(self, slotid):
 		self.nim_slots[slotid].removeInternalLink()
 
-	def canConnectTo(self, slotid):
-		slots = []
-		if self.nim_slots[slotid].internallyConnectableTo() is not None:
-			slots.append(self.nim_slots[slotid].internallyConnectableTo())
-		for type in self.nim_slots[slotid].connectableTo():
-			for slot in self.getNimListOfType(type, exception = slotid):
-				if self.hasOutputs(slot):
-					slots.append(slot)
+	def cleanUpAlreadyConnectedNims(self, slots, slotid):
 		# remove nims, that have a conntectedTo reference on
 		for testnim in slots[:]:
 			for nim in self.getNimListOfType("DVB-S", slotid):
 				nimConfig = self.getNimConfig(nim)
-				if "configMode" in nimConfig.content.items and nimConfig.configMode.value == "loopthrough" and int(nimConfig.connectedTo.value) == testnim:
+				if "configMode" in nimConfig.content.items and (nimConfig.configMode.value == "loopthrough_internal" or nimConfig.configMode.value == "loopthrough_external") and int(nimConfig.connectedTo.value) == testnim:
 					slots.remove(testnim)
 					break
+		return slots
+
+	def canInternalConnectTo(self, slotid):
+		slots = []
+		if self.nim_slots[slotid].internallyConnectableTo() is not None and self.nim_slots[slotid].internallyConnectableTo() >= 0:
+			slots.append(self.nim_slots[slotid].internallyConnectableTo())
+		slots = self.cleanUpAlreadyConnectedNims(slots, slotid)
+		slots = self.cleanUpDuplicates(slots, slotid)
 		slots.sort()
+		print "[NimManager] canInternalConnectTo slots: ", slots
+		return slots
+
+	def canExternalConnectTo(self, slotid):
+		slots = []
+		for type in self.nim_slots[slotid].connectableTo():
+			for slot in self.getNimListOfType(type, exception = slotid):
+				if self.hasOutputs(slot) and not "(internal)" in self.nim_slots[slot].description:
+					slots.append(slot)
+		slots = self.cleanUpAlreadyConnectedNims(slots, slotid)
+		slots = self.cleanUpDuplicates(slots, slotid)
+		slots.sort()
+		print "[NimManager] canExternalConnectTo slots: ", slots
+		return slots
+
+	def cleanUpDuplicates(self, slots, slotid):
+		# remove duplicates in slots
+		output = []
+		for x in slots:
+			if x not in output:
+				output.append(x)
+		slots = output
 		return slots
 
 	def canEqualTo(self, slotid):
@@ -930,7 +947,7 @@ class NimManager:
 		nimList = self.getNimListOfType(type, slotid)
 		for nim in nimList[:]:
 			mode = self.getNimConfig(nim)
-			if mode.configMode.value == "loopthrough" or mode.configMode.value == "satposdepends":
+			if mode.configMode.value == "loopthrough_internal" or mode.configMode.value == "loopthrough_external" or mode.configMode.value == "satposdepends":
 				nimList.remove(nim)
 		return nimList
 
@@ -1007,7 +1024,7 @@ class NimManager:
 				slotid = int(nim.connectedTo.value)
 				nim = config.Nims[slotid]
 				configMode = nim.configMode.value
-			elif configMode == "loopthrough":
+			elif configMode == "loopthrough_internal" or configMode == "loopthrough_external":
 				slotid = self.sec.getRoot(slotid, int(nim.connectedTo.value))
 				nim = config.Nims[slotid]
 				configMode = nim.configMode.value
@@ -1160,7 +1177,7 @@ def InitNimManager(nimmgr, update_slots = []):
 
 	lnb_choices = {
 		"universal_lnb": _("Universal LNB"),
-		"unicable": _("SCR (Unicable/JESS)"),
+		"unicable": _("Unicable / JESS"),
 		"c_band": _("C-Band"),
 		"circular_lnb": _("Circular LNB"),
 		"ka_sat": _("KA-SAT"),
@@ -1458,7 +1475,7 @@ def InitNimManager(nimmgr, update_slots = []):
 			possible_scan_types = [("bands", _("Frequency bands")), ("steps", _("Frequency steps"))]
 			if list:
 				possible_scan_types.append(("provider", _("Provider")))
-				nim.cable.scan_provider = ConfigSelection(default = "0", choices = list)
+				nim.cable.scan_provider = ConfigSelection(choices = list)
 			nim.cable.config_scan_details = ConfigYesNo(default = False)
 			nim.cable.scan_type = ConfigSelection(default = "bands", choices = possible_scan_types)
 			nim.cable.scan_band_EU_VHF_I = ConfigYesNo(default = True)
@@ -1570,8 +1587,10 @@ def InitNimManager(nimmgr, update_slots = []):
 			if len(nimmgr.getNimListOfType(slot.type, exception = x)) > 0:
 				config_mode_choices.append(("equal", _("equal to")))
 				config_mode_choices.append(("satposdepends", _("second cable of motorized LNB")))
-			if len(nimmgr.canConnectTo(x)) > 0:
-				config_mode_choices.append(("loopthrough", _("loopthrough to")))
+			if len(nimmgr.canInternalConnectTo(x)) > 0:
+				config_mode_choices.append(("loopthrough_internal", _("internal loopthrough to")))
+			if len(nimmgr.canExternalConnectTo(x)) > 0:
+				config_mode_choices.append(("loopthrough_external", _("external loopthrough to")))
 			nim.advanced = ConfigNothing()
 			tmp = ConfigSelection(config_mode_choices, slot.isFBCLink() and "nothing" or "simple")
 			tmp.slot_id = x
