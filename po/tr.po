@@ -9,7 +9,7 @@ msgstr ""
 "Project-Id-Version: enigma2 teamBlue (Apachi70)\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2018-11-30 19:40+0100\n"
-"PO-Revision-Date: 2018-12-21 10:03+0100\n"
+"PO-Revision-Date: 2018-12-21 12:13+0100\n"
 "Last-Translator: Apachi70 <apachi70000@gmail.com>\n"
 "Language-Team: Turkish <apachi70000@gmail.com>\n"
 "Language: tr\n"
@@ -173,7 +173,7 @@ msgid " (Partition %d)"
 msgstr " (%d bölümü)"
 
 msgid " (PiP)"
-msgstr " (RiR)"
+msgstr " (PiP)"
 
 msgid " (Radio)"
 msgstr " (Radyo)"
@@ -270,7 +270,7 @@ msgid "%Y-%m-%d %H:%M"
 msgstr "%Y-%m-%d %H:%M"
 
 msgid "%Y-%m-%d %H:%M:%S"
-msgstr "%Y-%m%d%H:%M:%S"
+msgstr "%Y-%m-%d %H:%M:%S"
 
 #. TRANSLATORS: full date representations short dayname daynum monthname long year in strftime() format! See 'man strftime'
 msgid "%a %e %B %Y"
@@ -1509,7 +1509,7 @@ msgid "Behavior of 'pause and ok' when paused"
 msgstr "'Duraklama ve Tamam' Davranış Duraklatıldığında"
 
 msgid "Behavior of 0 key in PiP-mode"
-msgstr "RiR kipinde 0 tuşu görevi"
+msgstr "PiP kipinde 0 tuşu görevi"
 
 msgid "Behavior when a movie is started"
 msgstr "Film başlatıldığı zaman"
@@ -5735,7 +5735,7 @@ msgid "Move PIP"
 msgstr "Move PIP"
 
 msgid "Move PiP to main picture"
-msgstr "Resim içinde resimi (RiR) ana ekrana tasi"
+msgstr "Resim içinde resimi (PiP) ana ekrana tasi"
 
 msgid "Move Picture in Picture"
 msgstr "Resimdeki Resmi Taşı"
@@ -6645,7 +6645,7 @@ msgid "Philippines"
 msgstr "Filipinler"
 
 msgid "PiP setup"
-msgstr "RiR kurulumu"
+msgstr "PiP kurulumu"
 
 msgid "Picon"
 msgstr "Simge"
@@ -6886,8 +6886,8 @@ msgid ""
 "Press Bouquet +/- to resize the window.\n"
 "Press OK to go back to the TV mode or EXIT to cancel the moving."
 msgstr ""
-"Lütfen yönlendirme tuşlarını kullanarak RiR ekranını taşıyın.\n"
-"RiR penceresini boyutlandırmak için Buket +/- tuşlarını kullanın.\n"
+"Lütfen yönlendirme tuşlarını kullanarak PiP ekranını taşıyın.\n"
+"PiP penceresini boyutlandırmak için Buket +/- tuşlarını kullanın.\n"
 "TV kipine dönmek için OK tuşuna veya taşımayı iptal etmek için EXIT tuşuna basın."
 
 msgid "Please use the UP and DOWN keys to select your language. Afterwards press the OK button."
@@ -7103,7 +7103,7 @@ msgid "Preparing... Please wait"
 msgstr "Hazırlanıyor... Lütfen bekleyin"
 
 msgid "Press '0' to toggle PiP mode"
-msgstr "RiR modu arasında geçiş yapmak için '0' tuşuna basın"
+msgstr "PiP modu arasında geçiş yapmak için '0' tuşuna basın"
 
 msgid "Press INFO on your remote control for additional information."
 msgstr "Ek bilgi için uzaktan kumanda üzerindeki INFO (EPG) tuşuna basın."
@@ -8652,7 +8652,7 @@ msgid "Show Log"
 msgstr "Log göster"
 
 msgid "Show PIP"
-msgstr "RIR göster"
+msgstr "PIP göster"
 
 msgid "Show SNR percentage instead of dB value"
 msgstr "SNR yüzdesi yerine dB değeri göster"
