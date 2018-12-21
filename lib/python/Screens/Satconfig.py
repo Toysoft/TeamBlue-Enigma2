@@ -86,10 +86,8 @@ class NimSetup(Screen, ConfigListScreen, ServiceStopScreen):
 				choices["equal"] = _("Equal to")
 			if len(nimmanager.canDependOn(self.slotid)) > 0:
 				choices["satposdepends"] = _("Second cable of motorized LNB")
-			if len(nimmanager.canInternalConnectTo(self.slotid)) > 0:
-				choices["loopthrough_internal"] = _("Internal loopthrough to")
-			if len(nimmanager.canExternalConnectTo(self.slotid)) > 0:
-				choices["loopthrough_external"] = _("External loopthrough to")
+			if len(nimmanager.canConnectTo(self.slotid)) > 0:
+				choices["loopthrough"] = _("Loop through from")
 			if self.nim.isFBCLink():
 				choices = { "nothing": _("FBC automatic"), "advanced": _("FBC SCR (Unicable/JESS)")}
 			self.nimConfig.configMode.setChoices(choices, self.nim.isFBCLink() and "nothing" or "simple")
@@ -127,15 +125,6 @@ class NimSetup(Screen, ConfigListScreen, ServiceStopScreen):
 		self.selectSatsEntry = None
 		self.advancedSelectSatsEntry = None
 		self.singleSatEntry = None
-		self.terrestrialRegionsEntry = None
-		self.cableRegionsEntry = None
-
-		if not hasattr(self, "terrestrialCountriesEntry"):
-			self.terrestrialCountriesEntry = None
-
-		if not hasattr(self, "cableCountriesEntry"):
-			self.cableCountriesEntry = None
-
 		self.toneamplitude = None
 		self.scpc = None
 		self.forcelnbpower = None
@@ -178,22 +167,14 @@ class NimSetup(Screen, ConfigListScreen, ServiceStopScreen):
 					choices.append((str(id), nimmanager.getNimDescription(id)))
 				self.nimConfig.connectedTo.setChoices(choices)
 				self.list.append(getConfigListEntry(_("Tuner"), self.nimConfig.connectedTo, _("Select the tuner that controls the motorised dish.")))
-			elif self.nimConfig.configMode.value == "loopthrough_internal":
+			elif self.nimConfig.configMode.value == "loopthrough":
 				choices = []
-				print "internal connectable to:", nimmanager.canInternalConnectTo(self.slotid)
-				connectable = nimmanager.canInternalConnectTo(self.slotid)
+				print "connectable to:", nimmanager.canConnectTo(self.slotid)
+				connectable = nimmanager.canConnectTo(self.slotid)
 				for id in connectable:
 					choices.append((str(id), nimmanager.getNimDescription(id)))
 				self.nimConfig.connectedTo.setChoices(choices)
-				self.list.append(getConfigListEntry(_("Internal connected to"), self.nimConfig.connectedTo))
-			elif self.nimConfig.configMode.value == "loopthrough_external":
-				choices = []
-				print "external connectable to:", nimmanager.canExternalConnectTo(self.slotid)
-				connectable = nimmanager.canExternalConnectTo(self.slotid)
-				for id in connectable:
-					choices.append((str(id), nimmanager.getNimDescription(id)))
-				self.nimConfig.connectedTo.setChoices(choices)
-				self.list.append(getConfigListEntry(_("External connected to"), self.nimConfig.connectedTo, _("Select the tuner that this loopthrough depends on.")))
+				self.list.append(getConfigListEntry(_("Connected to"), self.nimConfig.connectedTo, _("Select the tuner that this loopthrough depends on.")))
 			elif self.nimConfig.configMode.value == "nothing":
 				pass
 			elif self.nimConfig.configMode.value == "advanced": # advanced
@@ -436,12 +417,9 @@ class NimSetup(Screen, ConfigListScreen, ServiceStopScreen):
 						self.list.append(self.advancedPosition)
 					self.list.append(self.advancedSCR)
 				choices = []
-				connectable = nimmanager.canInternalConnectTo(self.slotid)
+				connectable = nimmanager.canConnectTo(self.slotid)
 				for id in connectable:
-					choices.append((str(id), nimmanager.getNimDescription(id) + _(" (internal connection)")))
-				connectable = nimmanager.canExternalConnectTo(self.slotid)
-				for id in connectable:
-					choices.append((str(id), nimmanager.getNimDescription(id) + _(" (external connection)")))
+					choices.append((str(id), nimmanager.getNimDescription(id)))
 				if len(choices):
 					if self.nim.isFBCLink():
 						if self.nimConfig.advanced.unicableconnected.value != True:
@@ -451,7 +429,6 @@ class NimSetup(Screen, ConfigListScreen, ServiceStopScreen):
 					if self.nimConfig.advanced.unicableconnected.value == True:
 						self.nimConfig.advanced.unicableconnectedTo.setChoices(choices)
 						self.list.append(getConfigListEntry(_("Connected to"),self.nimConfig.advanced.unicableconnectedTo, _("Select the tuner to which the signal cable of the SCR device is connected.")))
-				print "[Satconfig] unicableconnectedTo choices : ", choices
 
 			else:	#no Unicable
 				self.list.append(getConfigListEntry(_("Voltage mode"), Sat.voltage, _("Select 'polarisation' if using a 'universal' LNB, otherwise consult your LNB spec sheet.")))
@@ -537,79 +514,13 @@ class NimSetup(Screen, ConfigListScreen, ServiceStopScreen):
 			self.fillListWithAdvancedSatEntrys(Sat)
 		self["config"].list = self.list
 
-	def unicableconnection(self):
-		if self.nimConfig.configMode.value == "advanced":
-			connect_count = 0
-			dvbs_slots = nimmanager.getNimListOfType('DVB-S')
-			dvbs_slots_len = len(dvbs_slots)
-
-			for x in dvbs_slots:
-				try:
-					nim_slot = nimmanager.nim_slots[x]
-					if nim_slot == self.nimConfig:
-						self_idx = x
-					if nim_slot.config.configMode.value == "advanced":
-						if nim_slot.config.advanced.unicableconnected.value == True:
-							connect_count += 1
-				except: pass
-			print "[Satconfig] connections %d %d" %(connect_count, dvbs_slots_len)
-			if connect_count >= dvbs_slots_len:
-				return False
-
-		self.slot_dest_list = []
-		def checkRecursiveConnect(slot_id):
-			if slot_id in self.slot_dest_list:
-				print slot_id
-				return False
-			self.slot_dest_list.append(slot_id)
-			slot_config = nimmanager.nim_slots[slot_id].config
-			if slot_config.configMode.value == "advanced":
-				try:
-					connected = slot_config.advanced.unicableconnected.value
-				except:
-					connected = False
-				if connected == True:
-					return checkRecursiveConnect(int(slot_config.advanced.unicableconnectedTo.value))
-			return True
-
-		return checkRecursiveConnect(self.slotid)
-
-	def checkLoopthrough(self):
-		if self.nimConfig.configMode.value in ("loopthrough_internal", "loopthrough_external"):
-			loopthrough_count = 0
-			dvbs_slots = nimmanager.getNimListOfType('DVB-S')
-			dvbs_slots_len = len(dvbs_slots)
-
-			for x in dvbs_slots:
-				try:
-					nim_slot = nimmanager.nim_slots[x]
-					if nim_slot == self.nimConfig:
-						self_idx = x
-					if nim_slot.config.configMode.value in ("loopthrough_internal", "loopthrough_external"):
-						loopthrough_count += 1
-				except: pass
-			if loopthrough_count >= dvbs_slots_len:
-				return False
-
-		self.slot_dest_list = []
-		def checkRecursiveConnect(slot_id):
-			if slot_id in self.slot_dest_list:
-				return False
-			self.slot_dest_list.append(slot_id)
-			slot_config = nimmanager.nim_slots[slot_id].config
-			if slot_config.configMode.value in ("loopthrough_internal", "loopthrough_external"):
-				return checkRecursiveConnect(int(slot_config.connectedTo.value))
-			return True
-
-		return checkRecursiveConnect(self.slotid)
-
 	def keyOk(self):
 		if self.isChanged():
 			self.stopService()
-		if self["config"].getCurrent() == self.advancedSelectSatsEntry and self.advancedSelectSatsEntry:
+		if self["config"].getCurrent() == self.advancedSelectSatsEntry:
 			conf = self.nimConfig.advanced.sat[int(self.nimConfig.advanced.sats.value)].userSatellitesList
 			self.session.openWithCallback(boundFunction(self.updateConfUserSatellitesList, conf), SelectSatsEntryScreen, userSatlist=conf.value)
-		elif self["config"].getCurrent() == self.selectSatsEntry and self.selectSatsEntry:
+		elif self["config"].getCurrent() == self.selectSatsEntry:
 			conf = self.nimConfig.userSatellitesList
 			self.session.openWithCallback(boundFunction(self.updateConfUserSatellitesList, conf), SelectSatsEntryScreen, userSatlist=conf.value)
 		else:
@@ -623,12 +534,6 @@ class NimSetup(Screen, ConfigListScreen, ServiceStopScreen):
 	def keySave(self):
 		if self.isChanged():
 			self.stopService()
-		if not self.unicableconnection():
-			self.session.open(MessageBox, _("The unicable connection setting is wrong.\n Maybe recursive connection of tuners."),MessageBox.TYPE_ERROR,timeout=10)
-			return
-		if not self.checkLoopthrough():
-			self.session.open(MessageBox, _("The loopthrough setting is wrong."),MessageBox.TYPE_ERROR,timeout=10)
-			return
 		old_configured_sats = nimmanager.getConfiguredSats()
 		if not self.run():
 			return
@@ -881,14 +786,13 @@ class NimSelection(Screen):
 			text = nimConfig.configMode.value
 			if self.showNim(x):
 				if x.isCompatible("DVB-S"):
-					if nimConfig.configMode.value in ("loopthrough_internal", "loopthrough_external", "equal", "satposdepends"):
+					if nimConfig.configMode.value in ("loopthrough", "equal", "satposdepends"):
 						if x.isFBCLink():
 							text = _("FBC automatic\nconnected to")
 						else:
-							text = { "loopthrough_internal": _("Internal loopthrough to"),
-									 "loopthrough_external": _("External loopthrough to"),
-									 "equal": _("Equal to"),
-									 "satposdepends": _("Second cable of motorized LNB") } [nimConfig.configMode.value]
+							text = { "loopthrough": _("Loop through from"),
+									"equal": _("Equal to"),
+									"satposdepends": _("Second cable of motorized LNB") } [nimConfig.configMode.value]
 						text += " " + nimmanager.getNim(int(nimConfig.connectedTo.value)).slot_name
 					elif nimConfig.configMode.value == "nothing":
 						if x.isFBCLink():
