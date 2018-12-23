@@ -519,7 +519,7 @@ eServiceMP3::eServiceMP3(eServiceReference ref):
 	CONNECT(m_subtitle_sync_timer->timeout, eServiceMP3::pushSubtitles);
 	CONNECT(m_pump.recv_msg, eServiceMP3::gstPoll);
 	CONNECT(m_nownext_timer->timeout, eServiceMP3::updateEpgCacheNowNext);
-	m_aspect = m_width = m_height = m_framerate = m_progressive = -1;
+	m_aspect = m_width = m_height = m_framerate = m_progressive = m_gamma = -1;
 
 	m_state = stIdle;
 	m_subtitles_paused = false;
@@ -597,11 +597,6 @@ eServiceMP3::eServiceMP3(eServiceReference ref):
 	{
 		m_sourceinfo.containertype = ctMP4;
 		m_sourceinfo.audiotype = atAAC;
-	}
-	else if ( strcasecmp(ext, ".dra") == 0 )
-	{
-		m_sourceinfo.containertype = ctDRA;
-		m_sourceinfo.audiotype = atDRA;
 	}
 	else if ( strcasecmp(ext, ".m3u8") == 0 )
 		m_sourceinfo.is_hls = TRUE;
@@ -1646,6 +1641,7 @@ int eServiceMP3::getInfo(int w)
 	case sVideoWidth: return m_width;
 	case sFrameRate: return m_framerate;
 	case sProgressive: return m_progressive;
+	case sGamma: return m_gamma;
 	case sAspect: return m_aspect;
 	case sTagTitle:
 	case sTagArtist:
@@ -2575,6 +2571,12 @@ void eServiceMP3::gstBusCall(GstMessage *msg)
 							gst_structure_get_int (msgstruct, "height", &m_height);
 							if (strstr(eventname, "Changed"))
 								m_event((iPlayableService*)this, evVideoSizeChanged);
+						}
+						else if (!strcmp(eventname, "eventGammaChanged"))
+						{
+							gst_structure_get_int (msgstruct, "gamma", &m_gamma);
+							if (strstr(eventname, "Changed"))
+								m_event((iPlayableService*)this, evVideoGammaChanged);
 						}
 						else if (!strcmp(eventname, "eventFrameRateChanged") || !strcmp(eventname, "eventFrameRateAvail"))
 						{
