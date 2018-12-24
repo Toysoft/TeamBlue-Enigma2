@@ -9789,7 +9789,7 @@ msgstr "Seleccionar disco duro"
 
 #
 #, fuzzy, python-format
-msgid "Select Image: %s"
+msgid "Select Image: %s %s"
 msgstr "Seleccione una piel"
 
 #

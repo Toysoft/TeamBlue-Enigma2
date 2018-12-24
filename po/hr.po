@@ -9536,7 +9536,7 @@ msgstr "Odaberi Tvrdi Disk"
 
 #
 #, fuzzy, python-format
-msgid "Select Image: %s"
+msgid "Select Image: %s %s"
 msgstr "Odaberi film"
 
 #

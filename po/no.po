@@ -9392,7 +9392,7 @@ msgstr "Velg hdd/ssd"
 
 #
 #, fuzzy, python-format
-msgid "Select Image: %s"
+msgid "Select Image: %s %s"
 msgstr "Velg et skin"
 
 #
