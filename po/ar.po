@@ -9128,7 +9128,7 @@ msgstr "اختار القرص الصلب"
 
 #
 #, fuzzy, python-format
-msgid "Select Image: %s"
+msgid "Select Image: %s %s"
 msgstr "اختار الفيلم"
 
 #

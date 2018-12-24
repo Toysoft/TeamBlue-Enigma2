@@ -7930,7 +7930,7 @@ msgid "Select HDD"
 msgstr ""
 
 #, python-format
-msgid "Select Image: %s"
+msgid "Select Image: %s %s"
 msgstr ""
 
 msgid "Select Image: STARTUP_1"

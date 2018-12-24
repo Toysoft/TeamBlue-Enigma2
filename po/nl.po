@@ -8729,7 +8729,7 @@ msgid "Select HDD"
 msgstr "Kies harde schijf"
 
 #, fuzzy, python-format
-msgid "Select Image: %s"
+msgid "Select Image: %s %s"
 msgstr "Kies een skin"
 
 #, fuzzy

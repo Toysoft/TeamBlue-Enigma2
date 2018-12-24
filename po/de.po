@@ -8163,8 +8163,8 @@ msgid "Select HDD"
 msgstr "Festplattenauswahl"
 
 #, python-format
-msgid "Select Image: %s"
-msgstr "Image wählen: %s"
+msgid "Select Image: %s %s"
+msgstr "Image wählen: %s %s"
 
 msgid "Select Image: STARTUP_1"
 msgstr "Image wählen: STARTUP_1"

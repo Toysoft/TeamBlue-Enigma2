@@ -8490,7 +8490,7 @@ msgid "Select HDD"
 msgstr "選擇硬碟"
 
 #, fuzzy, python-format
-msgid "Select Image: %s"
+msgid "Select Image: %s %s"
 msgstr "選擇Softcam:"
 
 #, fuzzy
