@@ -9858,7 +9858,7 @@ msgstr "Izberite trdi disk"
 
 #
 #, fuzzy, python-format
-msgid "Select Image: %s %s"
+msgid "Select Image: %s"
 msgstr "Izberite preobleko"
 
 #

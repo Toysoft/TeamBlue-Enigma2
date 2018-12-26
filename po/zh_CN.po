@@ -8475,7 +8475,7 @@ msgid "Select HDD"
 msgstr "选择硬盘"
 
 #, fuzzy, python-format
-msgid "Select Image: %s %s"
+msgid "Select Image: %s"
 msgstr "选择包"
 
 #, fuzzy

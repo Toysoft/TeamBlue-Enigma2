@@ -9501,7 +9501,7 @@ msgstr "Seleccionar disc dur"
 
 #
 #, fuzzy, python-format
-msgid "Select Image: %s %s"
+msgid "Select Image: %s"
 msgstr "Seleccionar una pel·lícula"
 
 #

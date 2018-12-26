@@ -8648,7 +8648,7 @@ msgid "Select HDD"
 msgstr "Išsirinkite kietą diską"
 
 #, fuzzy, python-format
-msgid "Select Image: %s %s"
+msgid "Select Image: %s"
 msgstr "Išsirinkite filmą"
 
 #, fuzzy

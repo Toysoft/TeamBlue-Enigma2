@@ -6773,7 +6773,7 @@ msgid "Select Fast DiSEqC if your aerial system supports this. If you are unsure
 msgstr ""
 
 #, python-format
-msgid "Select Image: %s %s"
+msgid "Select Image: %s"
 msgstr ""
 
 msgid "Select Image: STARTUP_1"

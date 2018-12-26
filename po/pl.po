@@ -9865,7 +9865,7 @@ msgstr "Wybierz HDD"
 
 #
 #, fuzzy, python-format
-msgid "Select Image: %s %s"
+msgid "Select Image: %s"
 msgstr "Wybierz skin"
 
 #
