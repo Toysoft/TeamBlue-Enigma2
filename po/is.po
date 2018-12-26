@@ -9514,7 +9514,7 @@ msgstr "Veldu harðadisk"
 
 #
 #, fuzzy, python-format
-msgid "Select Image: %s %s"
+msgid "Select Image: %s"
 msgstr "Veldu mynd"
 
 #

@@ -9636,7 +9636,7 @@ msgstr "Valitse kiintolevy"
 
 #
 #, fuzzy, python-format
-msgid "Select Image: %s %s"
+msgid "Select Image: %s"
 msgstr "Valitse teema"
 
 #

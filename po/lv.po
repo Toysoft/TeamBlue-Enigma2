@@ -8550,7 +8550,7 @@ msgid "Select HDD"
 msgstr "Izvēlieties cieto disku"
 
 #, fuzzy, python-format
-msgid "Select Image: %s %s"
+msgid "Select Image: %s"
 msgstr "Izvēlieties ādiņu"
 
 #, fuzzy
